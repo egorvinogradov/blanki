@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>{% block title %}Blanki.biz &mdash; создать счёт на отлату бесплатно и за 1 минуту{% endblock title %}</title>
+<meta name="description" content="{% block meta-description %}{% endblock meta-description %}">
+<meta name="keywords" content="{% block meta-keywords %}{% endblock meta-keywords %}">
+    
+<!--TODO: set right title, meta keywords and meta description-->
+
+<meta property="og:image" content="http://blanki.biz/static/img/social-logo.png">
+<meta property="og:type" content="website">
+<meta property="og:description" content="">
+<meta property="og:site_name" content="Blanki.biz">
+<meta property="og:email" content="support@blanki.biz">
+<meta property="og:locale" content="ru_RU">
+
+<!--TODO: set right open graph meta tags-->
+
+<!--{% block css %}-->
+    <link href="../static/css/common.css" rel="stylesheet">
+    <link href="../static/css/document.invoice.css" rel="stylesheet">
+    <!--[if lte IE 8 ]>
+    <link href="../static/css/common.ie.css" rel="stylesheet">
+    <link href="../static/css/document.invoice.ie.css" rel="stylesheet">
+    <![endif]-->
+<!--{% endblock css %}-->
+
+<link rel="shortcut icon" href="">
+<link rel="apple-touch-icon" href="">
+<!--TODO: draw icons and set right icon path-->
+
+<!--[if lte IE 7 ]>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script type="text/javascript">
+        window.attachEvent('onload', function(){
+            CFInstall.check({mode:'overlay'})
+        })
+    </script>
+<![endif]-->
+
+</head>
+<body>
+
+<!--{% block content %}-->
+
+
+
+<!--{% endblock content %}-->
+
+<!--{% block js %}-->
+    <script type="text/javascript" src="../static/js/lib/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../static/js/lib/jquery-ui-1.8.22.custom.min.js"></script>
+    <script type="text/javascript" src="../static/js/common.js"></script>
+    <script type="text/javascript" src="../static/js/document.invoice.js"></script>
+<!--{% endblock js %}-->
+
+<!--{% block init-js %}-->
+    <script type="text/javascript">
+        Blanki.invoice.init();
+    </script>
+<!--{% endblock init-js %}-->
+
+</body>
+</html>
