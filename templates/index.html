@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>{% block title %}Blanki.biz &mdash; создать счёт на отлату бесплатно и за 1 минуту{% endblock title %}</title>
+<title>{% block title %}Blanki.biz &mdash; создать счет на отлату бесплатно и за 1 минуту{% endblock title %}</title>
 <meta name="description" content="{% block meta-description %}{% endblock meta-description %}">
 <meta name="keywords" content="{% block meta-keywords %}{% endblock meta-keywords %}">
 
@@ -54,79 +54,81 @@
 
     <div class="promo-header">
 
-        <div class="promo-header__logo"></div>
+        <div class="promo-header__logo">Blanki.biz</div>
         <div class="promo-header__title">
             <div class="promo-header__title-row-1">
-                <a class="promo-header__title-example-link" href="#"></a>
+                Выставить счет на оплату. <a class="promo-header__title-example-link" href="#">Пример</a>
             </div>
-            <div class="promo-header__title-row-2"></div>
+            <div class="promo-header__title-row-2">
+                Бесплатно. Заполняется за минуту.
+            </div>
         </div>
 
         <a class="promo-button" href="#">
-            <span class="promo-button-big"></span>
+            <span class="promo-button-big">Создать счет на оплату</span>
         </a>
 
         <!--{% block auth-form %}-->
 
             <div class="auth">
                 <div class="auth-login auth_opened">
-                    <div class="auth-title"></div>
+                    <div class="auth-title">Вход с помощью</div>
                     <ul class="auth-social">
                         <li class="auth-social__service auth-social_service_yandex">
-                            <a class="auth-social__service-link" href="#"></a>
+                            <a class="auth-social__service-link" href="#" title="Яндекс"></a>
                         </li>
                         <li class="auth-social__service auth-social_service_google">
-                            <a class="auth-social__service-link" href="#"></a>
+                            <a class="auth-social__service-link" href="#" title="Google"></a>
                         </li>
                         <li class="auth-social__service auth-social_service_vkontakte">
-                            <a class="auth-social__service-link" href="#"></a>
+                            <a class="auth-social__service-link" href="#" title="ВКонтакте"></a>
                         </li>
                         <li class="auth-social__service auth-social_service_odnoklassniki">
-                            <a class="auth-social__service-link" href="#"></a>
+                            <a class="auth-social__service-link" href="#" title="Одноклассники"></a>
                         </li>
                         <li class="auth-social__service auth-social_service_mailru">
-                            <a class="auth-social__service-link" href="#"></a>
+                            <a class="auth-social__service-link" href="#" title="Mail.ru"></a>
                         </li>
                         <li class="auth-social__service auth-social_service_facebook">
-                            <a class="auth-social__service-link" href="#"></a>
+                            <a class="auth-social__service-link" href="#" title="Facebook"></a>
                         </li>
                         <li class="auth-social__service auth-social_service_twitter">
-                            <a class="auth-social__service-link" href="#"></a>
+                            <a class="auth-social__service-link" href="#" title="Twitter"></a>
                         </li>
                     </ul>
-                    <div class="auth-title-separator"></div>
+                    <div class="auth-title-separator">или</div>
                     <form class="auth-form">
                         <div class="auth-form__field-wrapper">
-                            <input class="auth-form__field" name="email" type="email" placeholder="">
+                            <input class="auth-form__field" name="email" type="email" placeholder="E-mail">
                         </div>
                         <div class="auth-form__field-wrapper">
-                            <input class="auth-form__field" name="password" type="password" placeholder="">
+                            <input class="auth-form__field" name="password" type="password" placeholder="Пароль">
                         </div>
                         <div class="auth-form__submit-wrapper">
-                            <input class="auth-form__submit" value="" type="submit">
+                            <input class="auth-form__submit" value="Войти" type="submit">
                         </div>
                     </form>
-                    <div class="auth-title-separator"></div>
+                    <div class="auth-title-separator">или</div>
                     <div class="auth-link">
-                        <a class="auth-link__inner" href="#"></a>
+                        <span class="auth-link__inner">Регистрация</span>
                     </div>
                 </div>
                 <div class="auth-registration">
-                    <div class="auth-title"></div>
+                    <div class="auth-title">Регистрация</div>
                     <form class="auth-form">
                         <div class="auth-form__field-wrapper">
-                            <input class="auth-form__field" name="email" type="email" placeholder="">
+                            <input class="auth-form__field" name="email" type="email" placeholder="E-mail">
                         </div>
                         <div class="auth-form__field-wrapper">
-                            <input class="auth-form__field" name="password" type="password" placeholder="">
+                            <input class="auth-form__field" name="password" type="password" placeholder="Пароль">
                         </div>
                         <div class="auth-form__submit-wrapper">
-                            <input class="auth-form__submit" value="" type="submit">
+                            <input class="auth-form__submit" value="Регистрация" type="submit">
                         </div>
                     </form>
                     <div class="auth-title-separator"></div>
                     <div class="auth-link">
-                        <a class="auth-link__inner" href="#"></a>
+                        <span class="auth-link__inner">Вход</span>
                     </div>
                 </div>
             </div>
@@ -143,7 +145,13 @@
 
         <div class="promo-general__inner">
 
-            <div class="promo-general__heading"></div>
+            <div class="promo-general__heading">
+                <span class="g-nw"></span>
+                Blanki.biz &mdash; это удобный и бесплатный инструмент для выставления
+                счетов на оплату онлайн. Нажмите кнопку &laquo;Создать счет на оплату&raquo;, заполните
+                минимум необходимых данных, и счет готов! Распечатайте его прямо с сайта, сохраните
+                в формате DOC, PDF или отправьте по почте.
+            </div>
 
             <div class="promo-general-advantages">
                 <ul class="promo-general-advantages__column">
@@ -151,19 +159,25 @@
                         <span class="promo-general-advantages__icon">
                             <img class="promo-general-advantages__img" src="../static/img">
                         </span>
-                        <span class="promo-general-advantages__text"></span>
+                        <span class="promo-general-advantages__text">
+                            Заполнить и распечатать счет на оплату за одну минуту.
+                        </span>
                     </li>
                     <li class="promo-general-advantages__item">
                         <span class="promo-general-advantages__icon">
                             <img class="promo-general-advantages__img" src="../static/img">
                         </span>
-                        <span class="promo-general-advantages__text"></span>
+                        <span class="promo-general-advantages__text">
+                            Загрузить в форматах DOC, PDF или отправить по почте.
+                        </span>
                     </li>
                     <li class="promo-general-advantages__item">
                         <span class="promo-general-advantages__icon">
                             <img class="promo-general-advantages__img" src="../static/img">
                         </span>
-                        <span class="promo-general-advantages__text"></span>
+                        <span class="promo-general-advantages__text">
+                            Автоматически создавать и присылать новые счета регулярно.
+                        </span>
                     </li>
                 </ul>
                 <ul class="promo-general-advantages__column">
@@ -171,19 +185,26 @@
                         <span class="promo-general-advantages__icon">
                             <img class="promo-general-advantages__img" src="../static/img">
                         </span>
-                        <span class="promo-general-advantages__text"></span>
+                        <span class="promo-general-advantages__text">
+                            Выставить акт одним кликом.
+                        </span>
                     </li>
                     <li class="promo-general-advantages__item">
                         <span class="promo-general-advantages__icon">
                             <img class="promo-general-advantages__img" src="../static/img">
                         </span>
-                        <span class="promo-general-advantages__text"></span>
+                        <span class="promo-general-advantages__text">
+                            Интеллектуальная система автозаполнения &mdash; никаких лишних вычислений,
+                            а одну и ту же информацию не нужно вводить много раз.
+                        </span>
                     </li>
                     <li class="promo-general-advantages__item">
                         <span class="promo-general-advantages__icon">
                             <img class="promo-general-advantages__img" src="../static/img">
                         </span>
-                        <span class="promo-general-advantages__text"></span>
+                        <span class="promo-general-advantages__text">
+                            Абсолютно бесплатно.
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -200,11 +221,38 @@
 
         <div class="promo-info__ad">
             <!--TODO: place google adwords code here-->
+            <img src="../static/img">
         </div>
 
         <div class="promo-info__text">
-            <h1 class="promo-info__text-h"></h1>
-            <p class="promo-info__text-p"></p>
+            <h1 class="promo-info__text-h">Cчета на оплату онлайн</h1>
+            <p class="promo-info__text-p">
+                <strong class="promo-info__text-b">Угол курса устойчив.</strong> Проекция угловых скоростей,
+                несмотря на внешние воздействия, заставляет перейти к более сложной системе дифференциальных
+                уравнений, если добавить центр сил, что явно видно по фазовой траектории. Ускорение,
+                <a class="promo-info__text-a" href="#">обобщая изложенное</a>, ортогонально не входит своими
+                составляющими, что очевидно, в силы нормальных реакций связей, так же как и объект, составляя
+                уравнения Эйлера для этой системы координат. Регулярная прецессия заставляет перейти к более
+                сложной системе дифференциальных уравнений, если добавить период, действуя в рассматриваемой
+                механической системе.
+            </p>
+            <p class="promo-info__text-p">
+                Астатическая система координат Булгакова не зависит от скорости вращения внутреннего кольца
+                подвеса, что не кажется странным, если вспомнить о том, что мы не исключили из рассмотрения
+                динамический центр подвеса до полного прекращения вращения. Регулярная прецессия требует
+                большего внимания к анализу ошибок, которые даёт экваториальный момент, что является очевидным.
+                В силу принципа виртуальных скоростей, момент сил требует большего внимания к анализу ошибок,
+                которые даёт дифференциальный гирокомпас, изменяя направление движения.
+            </p>
+            <p class="promo-info__text-p">
+                Угол курса устойчив. Проекция угловых скоростей, несмотря на внешние воздействия, заставляет
+                перейти к более сложной системе дифференциальных уравнений, если добавить центр сил, что явно
+                видно по фазовой траектории. Ускорение, обобщая изложенное, ортогонально не входит своими
+                составляющими, что очевидно, в силы нормальных реакций связей, так же как и объект, составляя
+                уравнения Эйлера для этой системы координат. Регулярная прецессия заставляет перейти к более
+                сложной системе дифференциальных уравнений, если добавить период, действуя в рассматриваемой
+                механической системе.
+            </p>
         </div>
 
     </div>
@@ -216,8 +264,8 @@
     <div class="promo-start">
         <span class="promo-start__arrow promo-start__arrow_dir_right"></span>
         <a class="promo-start__button promo-button" href="#">
-            <span class="promo-button-big"></span>
-            <span class="promo-button-small"></span>
+            <span class="promo-button-big">Создать счет на оплату</span>
+            <span class="promo-button-small">бесплатно за одну минуту</span>
         </a>
         <span class="promo-start__arrow promo-start__arrow_dir_left"></span>
     </div>
@@ -227,13 +275,16 @@
     <!--footer-->
 
     <div class="footer">
-        <div class="footer__copyright"></div>
+        <div class="footer__copyright">
+            &copy; Blanki.biz &mdash; счета на оплату онлайн, 2012
+        </div>
         <ul class="footer__nav">
             <li class="footer__nav-item">
-                <a href="#" class="footer__nav-link"></a>
+                <a href="#" class="footer__nav-link">Вопросы и ответы</a>
             </li>
             <li class="footer__nav-item">
-                <a href="#" class="footer__nav-link"></a>
+                Напишите нам &mdash;
+                <a href="mailto:support@blanki.biz" class="footer__nav-link">support@blanki.biz</a>
             </li>
         </ul>
     </div>
