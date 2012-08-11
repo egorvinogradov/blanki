@@ -1,0 +1,156 @@
+.promo {
+    font: 13px/16px 'Open Sans', Arial, sans-serif;
+    font-weight: normal;
+    color: #292f35;
+}
+
+.promo-header {
+    width: 960px;
+    height: 210px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.promo-header__logo {
+    position: absolute;
+    font-size: 44px;
+    line-height: 44px;
+    top: 48px;
+    left: 10px;
+    font-weight: 300;
+}
+
+.promo-header__title {
+    font-size: 21px;
+    line-height: 30px;
+    font-weight: 300;
+    position: absolute;
+    top: 112px;
+    left: 11px;
+}
+
+.promo-header__title-example-link {
+    display: inline-block;
+    line-height: 21px;
+    color: #008fd5;
+    border-bottom: 1px solid #94d0ed;
+    text-decoration: none;
+    position: relative;
+}
+
+.promo-header__title-example-link:hover {
+    border-bottom-color: #008fd5;
+}
+
+.promo-header__title-example-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../img/promo-header-title-icon.png');
+    position: absolute;
+    right: -20px;
+    top: 5px;
+}
+
+.promo-header__title-row-2 {
+    color: #71858f;
+}
+
+.promo-header__create {
+    position: absolute;
+    right: 30px;
+    top: 107px;
+}
+
+.promo-button {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #ffcc00;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcc00), to(#ffa200));
+    background-image: -webkit-linear-gradient(top, #ffcc00, #ffa200);
+    background-image: -moz-linear-gradient(top, #ffcc00, #ffa200);
+    background-image: -o-linear-gradient(top, #ffcc00, #ffa200);
+    background-image: linear-gradient(top, #ffcc00, #ffa200);
+    padding: 20px 35px;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(175,116,1,.4);
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: box-shadow 100ms ease;
+       -moz-transition: box-shadow 100ms ease;
+            transition: box-shadow 100ms ease;
+}
+
+.promo-button__big {
+    display: block;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.promo-button__small {
+    display: block;
+    font-size: 18px;
+    line-height: 18px;
+    padding-top: 5px;
+    font-style: italic;
+    position: relative;
+}
+
+.promo-button:hover {
+    background-color: #ffdb49;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffdb49), to(#ffb12a));
+    background-image: -webkit-linear-gradient(top, #ffdb49, #ffb12a);
+    background-image: -moz-linear-gradient(top, #ffdb49, #ffb12a);
+    background-image: -o-linear-gradient(top, #ffdb49, #ffb12a);
+    background-image: linear-gradient(top, #ffdb49, #ffb12a);
+    box-shadow: 0 2px 2px rgba(0,0,0,.15);
+}
+
+.promo-button:active {
+    background-color: #fabe00;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fabe00), to(#faa000));
+    background-image: -webkit-linear-gradient(top, #fabe00, #faa000);
+    background-image: -moz-linear-gradient(top, #fabe00, #faa000);
+    background-image: -o-linear-gradient(top, #fabe00, #faa000);
+    background-image: linear-gradient(top, #fabe00, #faa000);
+    box-shadow: inset 0 4px 5px rgba(197,128,0,.55);
+}
+
+.promo-button:active .promo-button__big,
+.promo-button:active .promo-button__small {
+    top: 1px;
+}
+
+.promo-header__auth {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    z-index: 1;
+}
+
+.promo-header__auth .auth-dropdown {
+    right: -1px;
+    top: 0;
+}
+
+
+
+.promo-general {
+    background-color: #009CE8;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #0091DA), color-stop(0.5, #009DEB), color-stop(1, #0091DA));
+    background-image: -webkit-linear-gradient(left , #0091DA 0%, #009DEB 50%, #0091DA 100%);
+    background-image: -moz-linear-gradient(left , #0091DA 0%, #009DEB 50%, #0091DA 100%);
+    background-image: -o-linear-gradient(left , #0091DA 0%, #009DEB 50%, #0091DA 100%);
+    background-image: -ms-linear-gradient(left , #0091DA 0%, #009DEB 50%, #0091DA 100%);
+    background-image: linear-gradient(left , #0091DA 0%, #009DEB 50%, #0091DA 100%);
+}
+
+.promo-general__inner {
+    margin: 0 auto;
+    width: 960px;
+}
+
+

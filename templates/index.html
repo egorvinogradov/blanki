@@ -45,7 +45,7 @@
 </script>
 
 </head>
-<body>
+<body class="promo">
 
 <!--{% block content %}-->
 
@@ -57,22 +57,25 @@
         <div class="promo-header__logo">Blanki.biz</div>
         <div class="promo-header__title">
             <div class="promo-header__title-row-1">
-                Выставить счет на оплату. <a class="promo-header__title-example-link" href="#">Пример</a>
+                Выставить счет на оплату.
+                <a class="promo-header__title-example-link" href="#">
+                    Пример <i class="promo-header__title-example-icon"></i>
+                </a>
             </div>
             <div class="promo-header__title-row-2">
                 Бесплатно. Заполняется за минуту.
             </div>
         </div>
 
-        <a class="promo-button" href="#">
-            <span class="promo-button-big">Создать счет на оплату</span>
+        <a class="promo-header__create promo-button" href="#">
+            <span class="promo-button__big">Создать счет на оплату</span>
         </a>
 
         <!--{% block auth-form %}-->
 
-            <div class="auth">
-                <div class="auth-login auth_opened">
-                    <div class="auth-title">Вход с помощью</div>
+            <div class="promo-header__auth auth">
+                <div class="auth-login auth-dropdown auth_opened">
+                    <div class="auth__caption auth-title">Вход с помощью</div>
                     <ul class="auth-social">
                         <li class="auth-social__service auth-social_service_yandex">
                             <a class="auth-social__service-link" href="#" title="Яндекс"></a>
@@ -95,8 +98,12 @@
                         <li class="auth-social__service auth-social_service_twitter">
                             <a class="auth-social__service-link" href="#" title="Twitter"></a>
                         </li>
+                        <li class="auth-social__service_last"></li>
                     </ul>
-                    <div class="auth-title-separator">или</div>
+                    <div class="auth-title">
+                        <i class="auth-title__divider"></i>
+                        <span class="auth-title__text">или</span>
+                    </div>
                     <form class="auth-form">
                         <div class="auth-form__field-wrapper">
                             <input class="auth-form__field" name="email" type="email" placeholder="E-mail">
@@ -108,12 +115,15 @@
                             <input class="auth-form__submit" value="Войти" type="submit">
                         </div>
                     </form>
-                    <div class="auth-title-separator">или</div>
+                    <div class="auth-title">
+                        <i class="auth-title__divider"></i>
+                        <span class="auth-title__text">или</span>
+                    </div>
                     <div class="auth-link">
                         <span class="auth-link__inner">Регистрация</span>
                     </div>
                 </div>
-                <div class="auth-registration">
+                <div class="auth-registration auth-dropdown">
                     <div class="auth-title">Регистрация</div>
                     <form class="auth-form">
                         <div class="auth-form__field-wrapper">
@@ -126,7 +136,10 @@
                             <input class="auth-form__submit" value="Регистрация" type="submit">
                         </div>
                     </form>
-                    <div class="auth-title-separator"></div>
+                    <div class="auth-title">
+                        <i class="auth-title__divider"></i>
+                        <span class="auth-title__text">или</span>
+                    </div>
                     <div class="auth-link">
                         <span class="auth-link__inner">Вход</span>
                     </div>
@@ -157,7 +170,7 @@
                 <ul class="promo-general-advantages__column">
                     <li class="promo-general-advantages__item">
                         <span class="promo-general-advantages__icon">
-                            <img class="promo-general-advantages__img" src="../static/img">
+                            <img class="promo-general-advantages__img" src="../static/img/promo-icon-1.png">
                         </span>
                         <span class="promo-general-advantages__text">
                             Заполнить и распечатать счет на оплату за одну минуту.
@@ -165,7 +178,7 @@
                     </li>
                     <li class="promo-general-advantages__item">
                         <span class="promo-general-advantages__icon">
-                            <img class="promo-general-advantages__img" src="../static/img">
+                            <img class="promo-general-advantages__img" src="../static/img/promo-icon-2.png">
                         </span>
                         <span class="promo-general-advantages__text">
                             Загрузить в форматах DOC, PDF или отправить по почте.
@@ -173,7 +186,7 @@
                     </li>
                     <li class="promo-general-advantages__item">
                         <span class="promo-general-advantages__icon">
-                            <img class="promo-general-advantages__img" src="../static/img">
+                            <img class="promo-general-advantages__img" src="../static/img/promo-icon-3.png">
                         </span>
                         <span class="promo-general-advantages__text">
                             Автоматически создавать и присылать новые счета регулярно.
@@ -183,7 +196,7 @@
                 <ul class="promo-general-advantages__column">
                     <li class="promo-general-advantages__item">
                         <span class="promo-general-advantages__icon">
-                            <img class="promo-general-advantages__img" src="../static/img">
+                            <img class="promo-general-advantages__img" src="../static/img/promo-icon-4.png">
                         </span>
                         <span class="promo-general-advantages__text">
                             Выставить акт одним кликом.
@@ -191,7 +204,7 @@
                     </li>
                     <li class="promo-general-advantages__item">
                         <span class="promo-general-advantages__icon">
-                            <img class="promo-general-advantages__img" src="../static/img">
+                            <img class="promo-general-advantages__img" src="../static/img/promo-icon-5.png">
                         </span>
                         <span class="promo-general-advantages__text">
                             Интеллектуальная система автозаполнения &mdash; никаких лишних вычислений,
@@ -200,7 +213,7 @@
                     </li>
                     <li class="promo-general-advantages__item">
                         <span class="promo-general-advantages__icon">
-                            <img class="promo-general-advantages__img" src="../static/img">
+                            <img class="promo-general-advantages__img" src="../static/img/promo-icon-6.png">
                         </span>
                         <span class="promo-general-advantages__text">
                             Абсолютно бесплатно.
@@ -221,7 +234,7 @@
 
         <div class="promo-info__ad">
             <!--TODO: place google adwords code here-->
-            <img src="../static/img">
+            <img src="../static/img/ad.png">
         </div>
 
         <div class="promo-info__text">
@@ -264,8 +277,8 @@
     <div class="promo-start">
         <span class="promo-start__arrow promo-start__arrow_dir_right"></span>
         <a class="promo-start__button promo-button" href="#">
-            <span class="promo-button-big">Создать счет на оплату</span>
-            <span class="promo-button-small">бесплатно за одну минуту</span>
+            <span class="promo-button__big">Создать счет на оплату</span>
+            <span class="promo-button__small">бесплатно за одну минуту</span>
         </a>
         <span class="promo-start__arrow promo-start__arrow_dir_left"></span>
     </div>
