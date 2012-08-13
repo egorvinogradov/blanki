@@ -3,3 +3,7 @@
 *.pyc
 local_settings.py
 .idea/*
+*.pyo
+build/
+.project
+.pydevproject
