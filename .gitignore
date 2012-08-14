@@ -7,3 +7,8 @@ local_settings.py
 build/
 .project
 .pydevproject
+env/
+.settings/
+src/
+static/
+localsettings.py

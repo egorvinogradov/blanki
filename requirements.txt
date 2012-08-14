@@ -1,0 +1,5 @@
+django==1.4
+django-annoying==0.7.6
+South==0.7.6
+-e git://github.com/NetAngels/django-webodt.git@992121d692f62f74d1f616205fa5ad0e18997ad4#egg=django-webodt
+-e git://github.com/krvss/django-social-auth.git@7ffb07da8022678e53b3b58d752063e0f3b6c639#egg=django-social-auth

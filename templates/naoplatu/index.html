@@ -9,7 +9,7 @@
 
 <!--TODO: set right title, meta keywords and meta description-->
 
-<meta property="og:image" content="http://blanki.biz/media/img/social-logo.png">
+<meta property="og:image" content="http://blanki.biz{{ STATIC_URL }}img/social-logo.png">
 <meta property="og:type" content="website">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Blanki.biz">
@@ -19,11 +19,11 @@
 <!--TODO: set right open graph meta tags-->
 
 <!--{% block css %}-->
-    <link href="../media/css/common.css" rel="stylesheet">
-    <link href="../media/css/promo.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/common.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/promo.css" rel="stylesheet">
     <!--[if lte IE 8 ]>
-    <link href="../media/css/common.ie.css" rel="stylesheet">
-    <link href="../media/css/promo.ie.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/common.ie.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/promo.ie.css" rel="stylesheet">
     <![endif]-->
 <!--{% endblock css %}-->
 
@@ -170,7 +170,7 @@
                 <ul class="promo-general-advantages__column">
                     <li class="promo-general-advantages__item">
                         <span class="promo-general-advantages__icon">
-                            <img class="promo-general-advantages__img" src="../media/img/promo-icon-1.png">
+                            <img class="promo-general-advantages__img" src="{{ STATIC_URL }}img/promo-icon-1.png">
                         </span>
                         <span class="promo-general-advantages__text">
                             Заполнить и распечатать счет на оплату за одну минуту.
@@ -178,7 +178,7 @@
                     </li>
                     <li class="promo-general-advantages__item">
                         <span class="promo-general-advantages__icon">
-                            <img class="promo-general-advantages__img" src="../media/img/promo-icon-2.png">
+                            <img class="promo-general-advantages__img" src="{{ STATIC_URL }}img/promo-icon-2.png">
                         </span>
                         <span class="promo-general-advantages__text">
                             Загрузить в форматах DOC, PDF или отправить по почте.
@@ -186,7 +186,7 @@
                     </li>
                     <li class="promo-general-advantages__item">
                         <span class="promo-general-advantages__icon">
-                            <img class="promo-general-advantages__img" src="../media/img/promo-icon-3.png">
+                            <img class="promo-general-advantages__img" src="{{ STATIC_URL }}img/promo-icon-3.png">
                         </span>
                         <span class="promo-general-advantages__text">
                             Автоматически создавать и присылать новые счета регулярно.
@@ -196,7 +196,7 @@
                 <ul class="promo-general-advantages__column">
                     <li class="promo-general-advantages__item">
                         <span class="promo-general-advantages__icon">
-                            <img class="promo-general-advantages__img" src="../media/img/promo-icon-4.png">
+                            <img class="promo-general-advantages__img" src="{{ STATIC_URL }}img/promo-icon-4.png">
                         </span>
                         <span class="promo-general-advantages__text">
                             Выставить акт одним кликом.
@@ -204,7 +204,7 @@
                     </li>
                     <li class="promo-general-advantages__item">
                         <span class="promo-general-advantages__icon">
-                            <img class="promo-general-advantages__img" src="../media/img/promo-icon-5.png">
+                            <img class="promo-general-advantages__img" src="{{ STATIC_URL }}img/promo-icon-5.png">
                         </span>
                         <span class="promo-general-advantages__text">
                             Интеллектуальная система автозаполнения &mdash; никаких лишних вычислений,
@@ -213,7 +213,7 @@
                     </li>
                     <li class="promo-general-advantages__item">
                         <span class="promo-general-advantages__icon">
-                            <img class="promo-general-advantages__img" src="../media/img/promo-icon-6.png">
+                            <img class="promo-general-advantages__img" src="{{ STATIC_URL }}img/promo-icon-6.png">
                         </span>
                         <span class="promo-general-advantages__text">
                             Абсолютно бесплатно.
@@ -234,7 +234,7 @@
 
         <div class="promo-info__ad">
             <!--TODO: place google adwords code here-->
-            <img src="../media/img/ad.png">
+            <img src="{{ STATIC_URL }}img/ad.png">
         </div>
 
         <div class="promo-info__text">
@@ -308,10 +308,10 @@
 <!--{% endblock content %}-->
 
 <!--{% block js %}-->
-    <script type="text/javascript" src="../media/js/lib/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="../media/js/lib/jquery-ui-1.8.22.custom.min.js"></script>
-    <script type="text/javascript" src="../media/js/common.js"></script>
-    <script type="text/javascript" src="../media/js/promo.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery-ui-1.8.22.custom.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/common.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/promo.js"></script>
 <!--{% endblock js %}-->
 
 <!--{% block init-js %}-->
