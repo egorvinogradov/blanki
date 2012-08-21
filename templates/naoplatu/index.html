@@ -1,54 +1,22 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>{% block title %}Blanki.biz &mdash; создать счет на отлату бесплатно и за 1 минуту{% endblock title %}</title>
-<meta name="description" content="{% block meta-description %}{% endblock meta-description %}">
-<meta name="keywords" content="{% block meta-keywords %}{% endblock meta-keywords %}">
+{% extends 'base.html' %}
 
-<!--TODO: set right title, meta keywords and meta description-->
+<!-- TODO: заполнить правильно title, meta и og теги для промо-страницы -->
 
-<meta property="og:image" content="http://blanki.biz{{ STATIC_URL }}img/social-logo.png">
-<meta property="og:type" content="website">
-<meta property="og:description" content="">
-<meta property="og:site_name" content="Blanki.biz">
-<meta property="og:email" content="support@blanki.biz">
-<meta property="og:locale" content="ru_RU">
+{% block meta-description %}мета-дескрипшн{% endblock meta-description %}
+{% block meta-keywords %}ключевые слова{% endblock meta-keywords %}
+{% block og-description %}Описание для фейсбука{% endblock og-description %}
+{% block body-classes %}promo{% endblock %}
 
-<!--TODO: set right open graph meta tags-->
-
-<!--{% block css %}-->
-    <link href="{{ STATIC_URL }}css/common.css" rel="stylesheet">
-    <link href="{{ STATIC_URL }}css/promo.css" rel="stylesheet">
-    <!--[if lte IE 8 ]>
-    <link href="{{ STATIC_URL }}css/common.ie.css" rel="stylesheet">
-    <link href="{{ STATIC_URL }}css/promo.ie.css" rel="stylesheet">
-    <![endif]-->
-<!--{% endblock css %}-->
-
-<link rel="shortcut icon" href="">
-<link rel="apple-touch-icon" href="">
-<!--TODO: draw icons and set right icon path-->
-
-<!--[if lte IE 7 ]>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-    <script type="text/javascript">
-        window.attachEvent('onload', function(){
-            CFInstall.check({mode:'overlay'})
-        })
-    </script>
+{% block css %}
+<link href="{{ STATIC_URL }}css/common.css" rel="stylesheet">
+<link href="{{ STATIC_URL }}css/promo.css" rel="stylesheet">
+<!--[if lte IE 8 ]>
+<link href="{{ STATIC_URL }}css/common.ie.css" rel="stylesheet">
+<link href="{{ STATIC_URL }}css/promo.ie.css" rel="stylesheet">
 <![endif]-->
+{% endblock css %}
 
-<script type="text/javascript">
-    var Blanki = Blanki || {};
-</script>
-
-</head>
-<body class="promo">
-
-<!--{% block content %}-->
-
+{% block content %}
 
     <!--header-->
 
@@ -71,83 +39,8 @@
             <span class="promo-button__big">Создать счет на оплату</span>
         </a>
 
-        <!--{% block auth-form %}-->
+        {% include 'auth-form.html' %}
 
-            <div class="promo-header__auth auth">
-                <div class="auth-login auth-dropdown auth_opened">
-                    <div class="auth__caption auth-title">Вход с помощью</div>
-                    <ul class="auth-social">
-                        <li class="auth-social__service auth-social_service_yandex">
-                            <a class="auth-social__service-link" href="#" title="Яндекс"></a>
-                        </li>
-                        <li class="auth-social__service auth-social_service_google">
-                            <a class="auth-social__service-link" href="#" title="Google"></a>
-                        </li>
-                        <li class="auth-social__service auth-social_service_vkontakte">
-                            <a class="auth-social__service-link" href="#" title="ВКонтакте"></a>
-                        </li>
-                        <li class="auth-social__service auth-social_service_odnoklassniki">
-                            <a class="auth-social__service-link" href="#" title="Одноклассники"></a>
-                        </li>
-                        <li class="auth-social__service auth-social_service_mailru">
-                            <a class="auth-social__service-link" href="#" title="Mail.ru"></a>
-                        </li>
-                        <li class="auth-social__service auth-social_service_facebook">
-                            <a class="auth-social__service-link" href="#" title="Facebook"></a>
-                        </li>
-                        <li class="auth-social__service auth-social_service_twitter">
-                            <a class="auth-social__service-link" href="#" title="Twitter"></a>
-                        </li>
-                        <li class="auth-social__service_last"></li>
-                    </ul>
-                    <div class="auth-title">
-                        <i class="auth-title__divider"></i>
-                        <span class="auth-title__text">или</span>
-                    </div>
-                    <form class="auth-form">
-                        <div class="auth-form__field-wrapper">
-                            <input class="auth-form__field" name="email" type="email" placeholder="E-mail">
-                        </div>
-                        <div class="auth-form__field-wrapper">
-                            <input class="auth-form__field" name="password" type="password" placeholder="Пароль">
-                        </div>
-                        <div class="auth-form__submit-wrapper">
-                            <input class="auth-form__submit" value="Войти" type="submit">
-                        </div>
-                    </form>
-                    <div class="auth-title">
-                        <i class="auth-title__divider"></i>
-                        <span class="auth-title__text">или</span>
-                    </div>
-                    <div class="auth-link">
-                        <span class="auth-link__inner">Регистрация</span>
-                    </div>
-                </div>
-                <div class="auth-registration auth-dropdown">
-                    <div class="auth-title">Регистрация</div>
-                    <form class="auth-form">
-                        <div class="auth-form__field-wrapper">
-                            <input class="auth-form__field" name="email" type="email" placeholder="E-mail">
-                        </div>
-                        <div class="auth-form__field-wrapper">
-                            <input class="auth-form__field" name="password" type="password" placeholder="Пароль">
-                        </div>
-                        <div class="auth-form__submit-wrapper">
-                            <input class="auth-form__submit" value="Регистрация" type="submit">
-                        </div>
-                    </form>
-                    <div class="auth-title">
-                        <i class="auth-title__divider"></i>
-                        <span class="auth-title__text">или</span>
-                    </div>
-                    <div class="auth-link">
-                        <span class="auth-link__inner">Вход</span>
-                    </div>
-                </div>
-            </div>
-
-        <!--{% endblock auth-form %}-->
-    
     </div>
 
     <!--/ header-->
@@ -305,20 +198,21 @@
     <!--/ footer-->
 
 
-<!--{% endblock content %}-->
+{% endblock content %}
 
-<!--{% block js %}-->
-    <script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery-ui-1.8.22.custom.min.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/common.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/promo.js"></script>
-<!--{% endblock js %}-->
+{% block js %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery-ui-1.8.22.custom.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/common.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/promo.js"></script>
+{% endblock js %}
 
-<!--{% block init-js %}-->
-    <script type="text/javascript">
-        Blanki.promo.init();
-    </script>
-<!--{% endblock init-js %}-->
+{% block init-js %}
+<script type="text/javascript">
+    // TODO: правильно инитить js
+    //Blanki.promo.init();
+</script>
+{% endblock init-js %}
 
 </body>
 </html>

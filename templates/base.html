@@ -7,23 +7,25 @@
 <meta name="description" content="{% block meta-description %}{% endblock meta-description %}">
 <meta name="keywords" content="{% block meta-keywords %}{% endblock meta-keywords %}">
 
-<!--TODO: set right title, meta keywords and meta description-->
+<!-- TODO: написать стандарный meta-description -->
+<!-- TODO: написать стандарные meta-keywords -->
+<!-- TODO: написать стандарный og-description (отписание страницы для шааринга в соц. сетях) -->
+<!-- TODO: подкорректировать остальные og-теги -->
 
-<meta property="og:image" content="http://blanki.biz{{ STATIC_URL }}img/social-logo.png">
+<meta property="og:image" content="{{ STATIC_URL }}img/social-logo.png">
 <meta property="og:type" content="website">
-<meta property="og:description" content="">
+<meta property="og:description" content="{% block og-description %}{% endblock og-description %}">
 <meta property="og:site_name" content="Blanki.biz">
 <meta property="og:email" content="support@blanki.biz">
 <meta property="og:locale" content="ru_RU">
 
-<!--TODO: set right open graph meta tags-->
+{% block css %}
+{% endblock css %}
 
-<!--{% block css %}-->
-<!--{% endblock css %}-->
+<!-- TODO: нарисовать иконки и подставить правильные пути -->
 
-<link rel="shortcut icon" href="">
-<link rel="apple-touch-icon" href="">
-<!--TODO: draw icons and set right icon path-->
+<link rel="shortcut icon" href="{{ STATIC_URL }}img/">
+<link rel="apple-touch-icon" href="{{ STATIC_URL }}img/">
 
 <!--[if lte IE 7 ]>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
@@ -39,16 +41,16 @@
 </script>
 
 </head>
-<body>
+<body class="{% block body-classes %}{% endblock body-classes %}">
 
-<!--{% block content %}-->
-<!--{% endblock content %}-->
+{% block content %}
+{% endblock content %}
 
-<!--{% block js %}-->
-<!--{% endblock js %}-->
+{% block js %}
+{% endblock js %}
 
-<!--{% block init-js %}-->
-<!--{% endblock init-js %}-->
+{% block init-js %}
+{% endblock init-js %}
 
 </body>
 </html>
