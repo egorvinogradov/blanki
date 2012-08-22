@@ -6,7 +6,7 @@ $.fn.extend({
      *
      * @param {string} eventName Имя события.
      * @param {function} handler Обработчик события.
-     * @param {object} context Контект обработчика.
+     * @param {object} context Контекcт обработчика.
      */
     _on: function(eventName, handler, context){
         this.on(eventName, $.proxy(handler, context));
@@ -21,7 +21,9 @@ Blanki.extend = function(parent){
      * @usage var childModule = Blanki.extend(parentModule)
      * @param {function} parent Конструктор родительского модуля.
      */
-    var child = function(){};
+    var child = function(){
+        /** @constructor */
+    };
     for ( var method in parent.prototype ) {
         child.prototype[method] = parent.prototype[method];
     }
