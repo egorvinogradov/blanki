@@ -133,12 +133,11 @@
 
 .promo-header__auth .auth-dropdown {
     right: -1px;
-    top: 0;
+    top: -1px;
 }
 
-
-
 .promo-general {
+    color: #fff;
     background-color: #009CE8;
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #0091DA), color-stop(0.5, #009DEB), color-stop(1, #0091DA));
     background-image: -webkit-linear-gradient(left , #0091DA 0%, #009DEB 50%, #0091DA 100%);
@@ -151,6 +150,153 @@
 .promo-general__inner {
     margin: 0 auto;
     width: 960px;
+    padding: 40px 0;
 }
 
+.promo-general__heading {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+}
 
+.promo-general-advantages {
+    overflow: hidden;
+}
+
+.promo-general-advantages__column {
+    width: 50%;
+    float: left;
+}
+
+.promo-general-advantages__item {
+    height: 70px;
+    line-height: 70px;
+    position: relative;
+}
+
+.promo-general-advantages__icon {
+    width: 56px;
+    height: 56px;
+    display: inline-block;
+    background: rgba(0,0,0,.22);
+    position: relative;
+    vertical-align: middle;
+    border-radius: 10px;
+    position: relative;
+    left: -10px;
+}
+
+.promo-general-advantages__img {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+}
+
+.promo-general-advantages__text {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    margin-left: -65px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #d0f7ff;
+}
+
+.promo-general-advantages__text-inner {
+    padding-left: 70px;
+    display: inline-block;
+}
+
+.promo-general-advantages__column:first-child {
+    position: relative;
+    right: -10px;
+}
+
+.promo-info {
+    width: 960px;
+    margin: 0 auto;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.promo-info__ad {
+    float: left;
+    width: 370px;
+}
+
+.promo-info__text {
+    float: left;
+    width: 590px;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.promo-info__text-h {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.promo-info__text-p {
+    margin-bottom: 15px;
+}
+
+.promo-info__text-i {
+    font-style: italic;
+}
+
+.promo-info__text-b {
+    font-weight: bold;
+}
+
+.promo-info__text-a {
+    color: #007BB7;
+    text-decoration: underline;
+}
+
+.promo-info__text-a:hover {
+    color: #007BB7;
+    text-decoration: none;
+}
+
+.promo-start {
+    width: 960px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    text-align: center;
+    position: relative;
+}
+
+.promo-start__arrow {
+    position: absolute;
+    top: 13px;
+    width: 206px;
+    height: 62px;
+    opacity: 1;
+}
+
+.promo-start__arrow_dir_left {
+    background: url('../img/promo-arrow-l.png') no-repeat 50% 50%;
+    left: 70px;
+    -webkit-transition: left .4s;
+       -moz-transition: left .4s;
+            transition: left .4s;
+}
+
+.promo-start__arrow_dir_right {
+    background: url('../img/promo-arrow-r.png') no-repeat 50% 50%;
+    right: 70px;
+    -webkit-transition: right .4s;
+       -moz-transition: right .4s;
+            transition: right .4s;
+}
+
+.promo-start:hover .promo-start__arrow_dir_left {
+    left: 85px;
+}
+
+.promo-start:hover .promo-start__arrow_dir_right {
+    right: 85px;
+}

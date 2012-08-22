@@ -39,7 +39,7 @@
             <span class="promo-button__big">Создать счет на оплату</span>
         </a>
 
-        {% include 'auth-form.html' %}
+        {% include 'auth-form.html' with class_name="promo-header__auth" %}
 
     </div>
 
@@ -66,7 +66,9 @@
                             <img class="promo-general-advantages__img" src="{{ STATIC_URL }}img/promo-icon-1.png">
                         </span>
                         <span class="promo-general-advantages__text">
-                            Заполнить и распечатать счет на оплату за одну минуту.
+                            <span class="promo-general-advantages__text-inner">
+                                Заполнить и распечатать счет <span class="g-nw">на оплату за одну минуту.</span>
+                            </span>
                         </span>
                     </li>
                     <li class="promo-general-advantages__item">
@@ -74,7 +76,9 @@
                             <img class="promo-general-advantages__img" src="{{ STATIC_URL }}img/promo-icon-2.png">
                         </span>
                         <span class="promo-general-advantages__text">
-                            Загрузить в форматах DOC, PDF или отправить по почте.
+                            <span class="promo-general-advantages__text-inner">
+                                Загрузить в форматах DOC, PDF <span class="g-nw">или отправить по почте.</span>
+                            </span>
                         </span>
                     </li>
                     <li class="promo-general-advantages__item">
@@ -82,7 +86,9 @@
                             <img class="promo-general-advantages__img" src="{{ STATIC_URL }}img/promo-icon-3.png">
                         </span>
                         <span class="promo-general-advantages__text">
-                            Автоматически создавать и присылать новые счета регулярно.
+                            <span class="promo-general-advantages__text-inner">
+                                Автоматически создавать и <span class="g-nw">присылать новые счета регулярно.</span>
+                            </span>
                         </span>
                     </li>
                 </ul>
@@ -92,7 +98,9 @@
                             <img class="promo-general-advantages__img" src="{{ STATIC_URL }}img/promo-icon-4.png">
                         </span>
                         <span class="promo-general-advantages__text">
-                            Выставить акт одним кликом.
+                            <span class="promo-general-advantages__text-inner">
+                                Выставить акт одним кликом.
+                            </span>
                         </span>
                     </li>
                     <li class="promo-general-advantages__item">
@@ -100,8 +108,9 @@
                             <img class="promo-general-advantages__img" src="{{ STATIC_URL }}img/promo-icon-5.png">
                         </span>
                         <span class="promo-general-advantages__text">
-                            Интеллектуальная система автозаполнения &mdash; никаких лишних вычислений,
-                            а одну и ту же информацию не нужно вводить много раз.
+                            <span class="promo-general-advantages__text-inner">
+                                Интеллектуальная система автозаполнения &mdash; никаких лишних вычислений, а одну и ту же информацию не нужно вводить много раз.
+                            </span>
                         </span>
                     </li>
                     <li class="promo-general-advantages__item">
@@ -109,7 +118,9 @@
                             <img class="promo-general-advantages__img" src="{{ STATIC_URL }}img/promo-icon-6.png">
                         </span>
                         <span class="promo-general-advantages__text">
-                            Абсолютно бесплатно.
+                            <span class="promo-general-advantages__text-inner">
+                                Абсолютно бесплатно.
+                            </span>
                         </span>
                     </li>
                 </ul>
@@ -133,7 +144,7 @@
         <div class="promo-info__text">
             <h1 class="promo-info__text-h">Cчета на оплату онлайн</h1>
             <p class="promo-info__text-p">
-                <strong class="promo-info__text-b">Угол курса устойчив.</strong> Проекция угловых скоростей,
+                <em class="promo-info__text-i">Угол курса устойчив.</em> Проекция угловых скоростей,
                 несмотря на внешние воздействия, заставляет перейти к более сложной системе дифференциальных
                 уравнений, если добавить центр сил, что явно видно по фазовой траектории. Ускорение,
                 <a class="promo-info__text-a" href="#">обобщая изложенное</a>, ортогонально не входит своими
@@ -181,18 +192,20 @@
     <!--footer-->
 
     <div class="footer">
-        <div class="footer__copyright">
-            &copy; Blanki.biz &mdash; счета на оплату онлайн, 2012
+        <div class="footer__inner">
+            <div class="footer__copyright">
+                &copy; Blanki.biz &mdash; счета на оплату онлайн, 2012
+            </div>
+            <ul class="footer__nav">
+                <li class="footer__nav-item">
+                    <a href="#" class="footer__nav-link">Вопросы и ответы</a>
+                </li>
+                <li class="footer__nav-item">
+                    Напишите нам &mdash;
+                    <a href="mailto:support@blanki.biz" class="footer__nav-link">support@blanki.biz</a>
+                </li>
+            </ul>
         </div>
-        <ul class="footer__nav">
-            <li class="footer__nav-item">
-                <a href="#" class="footer__nav-link">Вопросы и ответы</a>
-            </li>
-            <li class="footer__nav-item">
-                Напишите нам &mdash;
-                <a href="mailto:support@blanki.biz" class="footer__nav-link">support@blanki.biz</a>
-            </li>
-        </ul>
     </div>
 
     <!--/ footer-->
@@ -209,8 +222,8 @@
 
 {% block init-js %}
 <script type="text/javascript">
-    // TODO: правильно инитить js
-    //Blanki.promo.init();
+    var Auth = new Blanki.Auth();
+    Auth.init();
 </script>
 {% endblock init-js %}
 

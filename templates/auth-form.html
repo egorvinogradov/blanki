@@ -1,5 +1,16 @@
-<div class="promo-header__auth auth">
-    <div class="auth-login auth-dropdown auth_opened">
+<div class="auth{% if class_name %} {{ class_name }}{% endif %}">
+    <div class="auth-button" tabindex="-1">
+        <div class="auth-button__caption">Вход с помощью</div>
+        <ul class="auth-button__social">
+            <li class="auth-button-social__item auth-button-social_item_yandex"></li>
+            <li class="auth-button-social__item auth-button-social_item_google"></li>
+            <li class="auth-button-social__item auth-button-social_item_vkontakte"></li>
+            <li class="auth-button-social__item auth-button-social_item_odnoklassniki"></li>
+            <li class="auth-button-social__item auth-button-social_item_dots">&hellip;</li>
+            <li class="auth-button-social__item auth-button-social_item_arrow">&#x25bc;</li>
+        </ul>
+    </div>
+    <div class="auth-login auth-dropdown">
         <div class="auth__caption auth-title">Вход с помощью</div>
         <ul class="auth-social">
             <li class="auth-social__service auth-social_service_yandex">
@@ -45,7 +56,7 @@
             <span class="auth-title__text">или</span>
         </div>
         <div class="auth-link">
-            <span class="auth-link__inner">Регистрация</span>
+            <span class="auth-link__inner auth-link__register">Регистрация</span>
         </div>
     </div>
     <div class="auth-registration auth-dropdown">
@@ -66,7 +77,7 @@
             <span class="auth-title__text">или</span>
         </div>
         <div class="auth-link">
-            <span class="auth-link__inner">Вход</span>
+            <span class="auth-link__inner auth-link__login">Вход</span>
         </div>
     </div>
 </div>
