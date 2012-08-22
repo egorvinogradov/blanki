@@ -239,8 +239,9 @@ input[type='submit'] {
 .auth-button-social_item_dots {
     background: none;
     line-height: 16px;
+    font-size: 12px;
     position: relative;
-    bottom: -2px;
+    bottom: -3px;
 }
 
 .auth-button-social_item_arrow {
