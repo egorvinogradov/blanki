@@ -5,7 +5,7 @@
 {% block meta-description %}мета-дескрипшн{% endblock meta-description %}
 {% block meta-keywords %}ключевые слова{% endblock meta-keywords %}
 {% block og-description %}Описание для фейсбука{% endblock og-description %}
-{% block body-classes %}promo{% endblock %}
+{% block body-classes %}invoice{% endblock %}
 
 {% block css %}
 <link href="{{ STATIC_URL }}css/common.css" rel="stylesheet">
@@ -18,7 +18,24 @@
 
 {% block content %}
 
-111
+
+    {% include 'doc-header.html' with user_logged_in="True" %}
+
+
+    <div class="doc-tips">
+        <div class="doc-tips__heading">Совет</div>
+        <ul class="doc-tips__nav">
+            <li class="doc-tips__nav-item doc-tips__nav-item_hide"></li>
+            <li class="doc-tips__nav-item doc-tips__nav-item_next"> &rarr;</li>
+        </ul>
+        <div class="doc-tips__text">
+
+        </div>
+    </div>
+
+    
+
+
 
 {% endblock content %}
 
@@ -31,7 +48,8 @@
 
 {% block init-js %}
 <script type="text/javascript">
-    //Blanki.invoice.init();
+    var Invoice = new Blanki.Invoice();
+    Invoice.init();
 </script>
 {% endblock init-js %}
 

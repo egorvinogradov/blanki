@@ -74,7 +74,7 @@ Blanki.Auth = Blanki.extend(Blanki.Base);
 
 Blanki.Auth.prototype.settings = {
     selectors: {
-        body: '.promo',
+        body: '.body',
         container: '.auth',
         button: '.auth-button',
         dropdown: {
