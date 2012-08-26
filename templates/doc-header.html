@@ -1,0 +1,52 @@
+<div class="doc-header">
+
+    <div class="doc-header__logo">
+        <a class="doc-header__logo-link" href="#">Blanki.biz</a>
+    </div>
+
+    <div class="doc-header__nav">
+
+        {% if user_logged_in %}
+
+            <div class="doc-header__nav-item doc-header__nav-item_dropdown doc-header__nav-item_user">
+                <span class="doc-header__nav-inner">
+                    <i class="doc-header__nav-icon"></i>
+                    <i class="doc-header__nav-arrow"></i>
+                    <span class="doc-header__nav-title">egor@ostrovok.ru</span>
+                </span>
+                <div class="doc-header__nav-dropdown">
+                    <a class="doc-header__nav-dropdown-item" href="#">Настройки</a>
+                    <a class="doc-header__nav-dropdown-item" href="#">Выход</a>
+                </div>
+            </div>
+
+        {% else %}
+
+            <div class="doc-header__nav-item doc-header__nav-item_dropdown doc-header__nav-item_user">
+                <span class="doc-header__nav-inner">
+                    <i class="doc-header__nav-icon"></i>
+                    <i class="doc-header__nav-arrow"></i>
+                    <span class="doc-header__nav-title">Новый пользователь</span>
+                </span>
+                {% include 'auth-form.html' with class_name="doc-header__nav-dropdown" %}
+            </div>
+
+        {% endif %}
+
+        <div class="doc-header__nav-item doc-header__nav-item_list">
+            <span class="doc-header__nav-inner">
+                <i class="doc-header__nav-icon"></i>
+                <a class="doc-header__nav-title" href="#">Мои счета</a>
+            </span>
+        </div>
+
+        <div class="doc-header__nav-item doc-header__nav-item_help">
+            <span class="doc-header__nav-inner">
+                <i class="doc-header__nav-icon"></i>
+                <a class="doc-header__nav-title" href="#">Помощь</a>
+            </span>
+        </div>
+
+    </div>
+
+</div>

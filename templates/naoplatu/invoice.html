@@ -330,11 +330,39 @@
             </div>
         </div>
 
+        <div class="doc-sheet-signatures">
+            <div class="doc-sheet-signatures__row">
+                <span class="doc-sheet-signatures__position">Руководитель</span>
+                <span class="doc-sheet-signatures__space">
+                    <button class="doc-sheet-signatures__button">Загрузить роспись</button>
+                </span>
+                <span class="doc-sheet-field">
+                    <span class="doc-sheet-field__before">(</span>
+                    <input class="doc-sheet-field__input" type="text" value="Иванов А.Б.">
+                    <span class="doc-sheet-field__after">)</span>
+                </span>
+            </div>
+            <div class="doc-sheet-signatures__row">
+                <span class="doc-sheet-signatures__position">Главный бухгалтер</span>
+                <span class="doc-sheet-signatures__space">
+                    <button class="doc-sheet-signatures__button">Загрузить роспись</button>
+                </span>
+                <span class="doc-sheet-field">
+                    <span class="doc-sheet-field__before">(</span>
+                    <input class="doc-sheet-field__input" type="text" value="Петрова В.Г.">
+                    <span class="doc-sheet-field__after">)</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="doc-sheet-stamp">
+            <div class="doc-sheet-stamp__title">Загрузить печать</div>
+            <button class="doc-sheet-button doc-sheet-stamp__button">Обзор...</button>
+        </div>
+
     </div>
 
-    
-
-
+    {% include 'footer.html' %}
 
 {% endblock content %}
 

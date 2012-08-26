@@ -1,0 +1,5 @@
+<span class="doc-sheet-field{% if class %} {{ class }}{% endif %}">
+    {% if before %}<span class="doc-sheet-field__before">{{ before }}</span>{% endif %}
+    <input class="doc-sheet-field__input" type="{% if type %}{{ type }}{% else %}text{% endif %}" value="{{ value }}">
+    {% if after %}<span class="doc-sheet-field__after">{{ after }}</span>{% endif %}
+</span>
