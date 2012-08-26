@@ -18,18 +18,17 @@
 
 {% block content %}
 
-
     {% include 'doc-header.html' with user_logged_in="True" %}
-
 
     <div class="doc-tips">
         <div class="doc-tips__heading">Совет</div>
         <ul class="doc-tips__nav">
-            <li class="doc-tips__nav-item doc-tips__nav-item_hide"></li>
-            <li class="doc-tips__nav-item doc-tips__nav-item_next"> &rarr;</li>
+            <li class="doc-tips__nav-item doc-tips__nav-item_hide">Больше не показывать</li>
+            <li class="doc-tips__nav-item doc-tips__nav-item_next">Ещё совет &rarr;</li>
         </ul>
         <div class="doc-tips__text">
-
+            Чтобы сохранить счет, а также получить возможность генерировать и присылать новые счета регулярно &mdash;
+            зарегистрируйтесь или войдите с помощью аккаунта в одной из социальных сетей.
         </div>
     </div>
 
@@ -38,77 +37,66 @@
     <div class="doc-sheet">
 
         <div class="doc-sheet-block">
-
             <div class="doc-sheet-logo">
-                <div class="doc-sheet-logo__title"></div>
-                <button class="doc-sheet-button doc-sheet-logo__button"></button>
+                <div class="doc-sheet-logo__title">Загрузить логотип</div>
+                <button class="doc-sheet-button doc-sheet-logo__button">Обзор...</button>
             </div>
-
             <div class="doc-sheet-org-info">
-
                 <div class="doc-sheet-row">
                     <select class="doc-sheet-select">
-                        <option></option>
-                        <option></option>
-                        <option></option>
+                        <option selected>ООО</option>
+                        <option>ОАО</option>
+                        <option>ЗАО</option>
+                        <!-- TODO: Узнать все варианты -->
                     </select>
                     <span class="doc-sheet-field">
                         <span class="doc-sheet-field__before">&laquo;</span>
-                        <input class="doc-sheet-field__input" type="text" value="">
+                        <input class="doc-sheet-field__input" type="text" value="Первая межгалактическая корпорация">
                         <span class="doc-sheet-field__after">&raquo;</span>
                     </span>
                 </div>
-
                 <div class="doc-sheet-row">
                     <span class="doc-sheet-field">
-                        <input class="doc-sheet-field__input" type="text" value="">
+                        <input class="doc-sheet-field__input" type="text" value="115093, Москва, ул. Космонавтов, д. 42">
                     </span>
                 </div>
-
                 <div class="doc-sheet-row">
                     <select class="doc-sheet-select">
-                        <option></option>
-                        <option></option>
-                        <option></option>
+                        <option>Телефон/факс</option>
+                        <option>Телефон</option>
+                        <option>Факс</option>
+                        <option>E-mail</option>
                     </select>:
                     <span class="doc-sheet-field">
-                        <input class="doc-sheet-field__input" type="text" value="">
+                        <input class="doc-sheet-field__input" type="text" value="+7 (495) 123-77-77, +7 (495) 123-77-78">
                     </span>
                 </div>
-
             </div>
-
         </div>
 
-
         <div class="doc-sheet-block doc-sheet-block_not-required">
-
-            <span class="doc-sheet-block__hide"></span>
-            <div class="doc-sheet-h3"></div>
-
+            <span class="doc-sheet-block__hide">Убрать</span>
+            <div class="doc-sheet-h3">Образец заполнения платежного поручения</div>
             <table class="doc-sheet-table doc-sheet-table_width_100">
-
                 <colgroup>
                     <col class="doc-sheet-table__col_width_60">
                     <col class="doc-sheet-table__col_width_10">
                     <col class="doc-sheet-table__col_width_30">
                 </colgroup>
-
                 <tbody>
-
                     <tr>
                         <td class="doc-sheet-table__td">
                             <ul class="doc-sheet-table__list doc-sheet-table__list_inline">
                                 <li class="doc-sheet-table__list-item doc-sheet-table__list-item_width_50">
                                     ИНН
                                     <span class="doc-sheet-field">
-                                        <input class="doc-sheet-field__input" type="text" value="">
+                                        <input class="doc-sheet-field__input" type="text" value="7705667798">
                                     </span>
                                 </li>
                                 <li class="doc-sheet-table__list-item doc-sheet-table__list-item_width_50">
                                     КПП
                                     <span class="doc-sheet-field">
-                                        <input class="doc-sheet-field__input" type="text" value="">
+                                        <input class="doc-sheet-field__input" type="text" value="671010011">
                                     </span>
                                 </li>
                             </ul>
@@ -116,70 +104,65 @@
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_bottom" rowspan="2">Сч. №</td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_bottom" rowspan="2">
                             <span class="doc-sheet-field">
-                                <input class="doc-sheet-field__input" type="text" value="">
+                                <input class="doc-sheet-field__input" type="text" value="40702810500005042124">
                             </span>
                         </td>
                     </tr>
-
                     <tr>
                         <td class="doc-sheet-table__td">
-                            <div class="doc-sheet-row"></div>
+                            <div class="doc-sheet-row">Получатель</div>
                             <div class="doc-sheet-row">
+                                <!-- TODO: Узнать, может ли это отличаться от названия фирмы выше, в реквизитах -->
                                 <select class="doc-sheet-select">
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
+                                    <option selected>ООО</option>
+                                    <option>ОАО</option>
+                                    <option>ЗАО</option>
                                 </select>
                                 <span class="doc-sheet-field">
                                     <span class="doc-sheet-field__before">&laquo;</span>
-                                    <input class="doc-sheet-field__input" type="text" value="">
+                                    <input class="doc-sheet-field__input" type="text" value="Первая межгалактическая корпорация">
                                     <span class="doc-sheet-field__after">&raquo;</span>
                                 </span>
                             </div>
                         </td>
                     </tr>
-
                     <tr>
                         <td class="doc-sheet-table__td" rowspan="2">
-                            <div class="doc-sheet-row"></div>
+                            <div class="doc-sheet-row">Банк получателя</div>
                             <div class="doc-sheet-row">
                                 <span class="doc-sheet-field">
-                                    <input class="doc-sheet-field__input" type="text" value="">
+                                    <input class="doc-sheet-field__input" type="text" value="АКБ «Федеральный звёздный банк»">
                                 </span>
                             </div>
                         </td>
                         <td class="doc-sheet-table__td">БИК</td>
                         <td class="doc-sheet-table__td">
                             <span class="doc-sheet-field">
-                                <input class="doc-sheet-field__input" type="text" value="">
+                                <input class="doc-sheet-field__input" type="text" value="044585272">
                             </span>
                         </td>
                     </tr>
-
                     <tr>
                         <td class="doc-sheet-table__td">Сч. №</td>
                         <td class="doc-sheet-table__td">
                             <span class="doc-sheet-field">
-                                <input class="doc-sheet-field__input" type="text" value="">
+                                <input class="doc-sheet-field__input" type="text" value="30101810800000000272">
                             </span>
                         </td>
                     </tr>
-
                 </tbody>
-
             </table>
-
         </div>
 
-
         <div class="doc-sheet-h1">
-
+            Счет №
             <span class="doc-sheet-field">
-                <input class="doc-sheet-field__input" type="text" value="">
+                <input class="doc-sheet-field__input" type="text" value="000289">
             </span>
-
+            от
             <span class="doc-sheet-field">
-                <input class="doc-sheet-field__input" type="date" value="">
+                <input class="doc-sheet-field__input" type="date" value="23 июля 2012 г.">
+                <input class="doc-sheet-field__input" type="hidden" value="2012-08-23">
                 <span class="doc-sheet-field__after">
                     <span class="doc-sheet-field__icon_calendar"></span>
                 </span>
@@ -189,31 +172,33 @@
         <table class="doc-sheet-table doc-sheet-table_border_none">
             <tbody>
                 <tr>
-                    <td class="doc-sheet-table__td"></td>
+                    <!-- TODO: Узнать, правильно ли писать "Плательщик" и "Получатель" -->
+                    <td class="doc-sheet-table__td">Плательщик:</td>
                     <td class="doc-sheet-table__td">
                         <select class="doc-sheet-select">
-                            <option></option>
-                            <option></option>
-                            <option></option>
+                            <option>ООО</option>
+                            <option selected>ОАО</option>
+                            <option>ЗАО</option>
                         </select>
                         <span class="doc-sheet-field">
                             <span class="doc-sheet-field__before">&laquo;</span>
-                            <input class="doc-sheet-field__input" type="text" value="">
+                            <input class="doc-sheet-field__input" type="text" value="Объединённый космический альянс">
                             <span class="doc-sheet-field__after">&raquo;</span>
                         </span>
                     </td>
                 </tr>
                 <tr>
-                    <td class="doc-sheet-table__td"></td>
+                    <td class="doc-sheet-table__td">Получатель:</td>
                     <td class="doc-sheet-table__td">
+                        <!-- TODO: Узнать, может ли это отличаться от названия фирмы выше, в реквизитах -->
                         <select class="doc-sheet-select">
-                            <option></option>
-                            <option></option>
-                            <option></option>
+                            <option selected>ООО</option>
+                            <option>ОАО</option>
+                            <option>ЗАО</option>
                         </select>
                         <span class="doc-sheet-field">
                             <span class="doc-sheet-field__before">&laquo;</span>
-                            <input class="doc-sheet-field__input" type="text" value="">
+                            <input class="doc-sheet-field__input" type="text" value="Первая межгалактическая корпорация">
                             <span class="doc-sheet-field__after">&raquo;</span>
                         </span>
                     </td>
@@ -222,7 +207,6 @@
         </table>
 
         <table class="doc-sheet-table doc-sheet-table_width_100">
-
             <colgroup>
                 <col class="doc-sheet-table__col_width_5">
                 <col class="doc-sheet-table__col_width_45">
@@ -231,121 +215,120 @@
                 <col class="doc-sheet-table__col_width_10">
                 <col class="doc-sheet-table__col_width_10">
             </colgroup>
-
             <thead>
                 <tr>
                     <th class="doc-sheet-table__th doc-sheet-table__td_align_center">№</th>
-                    <th class="doc-sheet-table__th"></th>
-                    <th class="doc-sheet-table__th"></th>
-                    <th class="doc-sheet-table__th"></th>
-                    <th class="doc-sheet-table__th"></th>
-                    <th class="doc-sheet-table__th"></th>
+                    <th class="doc-sheet-table__th">Наименование товара</th>
+                    <th class="doc-sheet-table__th">Единица</th>
+                    <th class="doc-sheet-table__th">Количество</th>
+                    <th class="doc-sheet-table__th">Цена</th>
+                    <th class="doc-sheet-table__th">Сумма</th>
                 </tr>
             </thead>
-
             <tbody>
-
                 <tr>
                     <td class="doc-sheet-table__td doc-sheet-table__td_align_center">1</td>
                     <td class="doc-sheet-table__td">
                         <span class="doc-sheet-field">
-                            <input class="doc-sheet-field__input" type="text" value="">
+                            <input class="doc-sheet-field__input" type="text" value="Звёздный истребитель T-65 X-Wing">
                         </span>
                     </td>
                     <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
                         <span class="doc-sheet-field">
-                            <input class="doc-sheet-field__input" type="text" value="">
+                            <input class="doc-sheet-field__input" type="text" value="шт.">
                         </span>
                     </td>
                     <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
                         <span class="doc-sheet-number">
                             <button class="doc-sheet-number_decrease doc-sheet-button">&minus;</button>
-                            <input class="doc-sheet-number__input" type="text" value="">
+                            <input class="doc-sheet-number__input" type="number" min="1" value="1">
                             <button class="doc-sheet-number_increase doc-sheet-button">+</button>
                         </span>
                     </td>
                     <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
                         <span class="doc-sheet-field">
-                            <input class="doc-sheet-field__input" type="text" value="">
+                            <input class="doc-sheet-field__input" type="text" value="975 000.00">
                         </span>
                     </td>
                     <td class="doc-sheet-table__td doc-sheet-table__td_align_center">975 000.00</td>
                 </tr>
-
                 <tr>
-                    <td class="doc-sheet-table__td doc-sheet-table__td_align_center">1</td>
+                    <td class="doc-sheet-table__td doc-sheet-table__td_align_center">2</td>
                     <td class="doc-sheet-table__td">
                         <span class="doc-sheet-field">
-                            <input class="doc-sheet-field__input" type="text" value="">
+                            <input class="doc-sheet-field__input" type="text" value="Звёздный истребитель T-65 X-Wing">
                         </span>
                     </td>
                     <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
                         <span class="doc-sheet-field">
-                            <input class="doc-sheet-field__input" type="text" value="">
+                            <input class="doc-sheet-field__input" type="text" value="шт.">
                         </span>
                     </td>
                     <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
                         <span class="doc-sheet-number">
                             <button class="doc-sheet-number_decrease doc-sheet-button">&minus;</button>
-                            <input class="doc-sheet-number__input" type="text" value="">
+                            <input class="doc-sheet-number__input" type="number" min="1" value="1">
                             <button class="doc-sheet-number_increase doc-sheet-button">+</button>
                         </span>
                     </td>
                     <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
                         <span class="doc-sheet-field">
-                            <input class="doc-sheet-field__input" type="text" value="">
+                            <input class="doc-sheet-field__input" type="text" value="975 000.00">
                         </span>
                     </td>
                     <td class="doc-sheet-table__td doc-sheet-table__td_align_center">975 000.00</td>
                 </tr>
-
                 <tr>
                     <td class="doc-sheet-table__td doc-sheet-table__border_none" colspan="2" rowspan="3">
                         <button class="doc-sheet-button doc-sheet-button_add">
                             <i class="doc-sheet-button__icon"></i>
+                            Добавить ещё
                         </button>
                     </td>
-                    <td class="doc-sheet-table__td doc-sheet-table__border_none doc-sheet-table__td_align_right" colspan="3"></td>
+                    <td class="doc-sheet-table__td doc-sheet-table__border_none doc-sheet-table__td_align_right" colspan="3">Итого</td>
                     <td class="doc-sheet-table__td doc-sheet-table__td_align_center">975 000.00</td>
                 </tr>
-
                 <tr>
                     <td class="doc-sheet-table__td doc-sheet-table__border_none doc-sheet-table__td_align_right" colspan="3">
-                        <select class="doc-sheet-select">
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                        </select>
+                        <div class="dropdown dropdown_appearance_select">
+                            <div class="dropdown__row">Без НДС</div>
+                            <div class="dropdown__row">НДС (18%)</div>
+                            <div class="dropdown__row">НДС (10%)</div>
+                            <div class="dropdown__row dropdown__row_selectable_none">
+                                <label class="dropdown__block">
+                                    <input class="dropdown__radio" type="radio" checked>
+                                    НДС включен в стоимость
+                                </label>
+                                <label class="dropdown__block">
+                                    <input class="dropdown__radio" type="radio">
+                                    НДС насчитывается сверху <!-- TODO: Изменить формулировку -->
+                                </label>
+                            </div>
+                        </div>
                     </td>
                     <td class="doc-sheet-table__td doc-sheet-table__td_align_center">175 500.00</td>
                 </tr>
-
                 <tr>
-                    <td class="doc-sheet-table__th doc-sheet-table__border_none doc-sheet-table__td_align_right" colspan="3">
-                        
-                    </td>
+                    <td class="doc-sheet-table__th doc-sheet-table__border_none doc-sheet-table__td_align_right" colspan="3">Итого</td>
                     <td class="doc-sheet-table__th doc-sheet-table__td_align_center">1 150 500.00</td>
                 </tr>
-
             </tbody>
-
         </table>
 
-
-        <div class="doc-sheet-row"></div>
-        <div class="doc-sheet-row doc-sheet-b"></div>
-
-
-        <div class="doc-sheet-block doc-sheet-block_not-required">
-            <span class="doc-sheet-block__hide"></span>
-            <div class="doc-sheet-block__title"></div>
-            <div class="doc-sheet-field">
-                <textarea class="doc-sheet-field__textarea"></textarea>
-            </div>
+        <div class="doc-sheet-row">
+            Всего наименований 1, на сумму 1 150 500.00 руб.
+        </div>
+        <div class="doc-sheet-row doc-sheet-b">
+            Тридцать семь тысяч пятьсот шестнадцать рублей восемнадцать копеек
         </div>
 
-    
-
+        <div class="doc-sheet-block doc-sheet-block_not-required">
+            <span class="doc-sheet-block__hide">Убрать</span>
+            <div class="doc-sheet-block__title">Пояснительный текст</div>
+            <div class="doc-sheet-field">
+                <textarea class="doc-sheet-field__textarea">Внимание! Счет действителен в течении 5 рабочих дней. Неоплаченный счет аннулируется. Товар отпускается по приходу денег на расчетный счет Поставщика при наличии копии платежного поручения, доверенности и паспорта. Оплата счета означает согласие с условиями поставки товара.</textarea>
+            </div>
+        </div>
 
     </div>
 
