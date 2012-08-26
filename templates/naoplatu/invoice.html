@@ -39,7 +39,7 @@
         <div class="doc-sheet-block">
             <div class="doc-sheet-logo">
                 <div class="doc-sheet-logo__title">Загрузить логотип</div>
-                <button class="doc-sheet-button doc-sheet-logo__button">Обзор...</button>
+                <button class="doc-button doc-button_color_light-gray doc-button_size_25 doc-sheet-logo__button">Обзор...</button>
             </div>
             <div class="doc-sheet-org-info">
                 <div class="doc-sheet-row">
@@ -239,10 +239,10 @@
                         </span>
                     </td>
                     <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
-                        <span class="doc-sheet-number">
-                            <button class="doc-sheet-number_decrease doc-sheet-button">&minus;</button>
-                            <input class="doc-sheet-number__input" type="number" min="1" value="1">
-                            <button class="doc-sheet-number_increase doc-sheet-button">+</button>
+                        <span class="doc-field doc-field_number doc-field_size_20">
+                            <button class="doc-field_number__decrease doc-button doc-button_color_light-gray">&minus;</button>
+                            <input class="doc-field__input" type="number" min="1" value="1">
+                            <button class="doc-field_number__increase doc-button doc-button_color_light-gray">+</button>
                         </span>
                     </td>
                     <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
@@ -265,10 +265,10 @@
                         </span>
                     </td>
                     <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
-                        <span class="doc-sheet-number">
-                            <button class="doc-sheet-number_decrease doc-sheet-button">&minus;</button>
-                            <input class="doc-sheet-number__input" type="number" min="1" value="1">
-                            <button class="doc-sheet-number_increase doc-sheet-button">+</button>
+                        <span class="doc-field doc-field_number doc-field_size_20">
+                            <button class="doc-field_number__decrease doc-button doc-button_color_light-gray">&minus;</button>
+                            <input class="doc-field__input" type="number" min="1" value="1">
+                            <button class="doc-field_number__increase doc-button doc-button_color_light-gray">+</button>
                         </span>
                     </td>
                     <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
@@ -280,8 +280,8 @@
                 </tr>
                 <tr>
                     <td class="doc-sheet-table__td doc-sheet-table__border_none" colspan="2" rowspan="3">
-                        <button class="doc-sheet-button doc-sheet-button_add">
-                            <i class="doc-sheet-button__icon"></i>
+                        <button class="doc-button doc-button_color_light-gray doc-button_size_28 doc-button_add">
+                            <i class="doc-button__icon"></i>
                             Добавить ещё
                         </button>
                     </td>
@@ -290,17 +290,17 @@
                 </tr>
                 <tr>
                     <td class="doc-sheet-table__td doc-sheet-table__border_none doc-sheet-table__td_align_right" colspan="3">
-                        <div class="dropdown dropdown_appearance_select">
-                            <div class="dropdown__row">Без НДС</div>
-                            <div class="dropdown__row">НДС (18%)</div>
-                            <div class="dropdown__row">НДС (10%)</div>
-                            <div class="dropdown__row dropdown__row_selectable_none">
-                                <label class="dropdown__block">
-                                    <input class="dropdown__radio" type="radio" checked>
+                        <div class="doc-dropdown doc-dropdown_appearance_select">
+                            <div class="doc-dropdown__row">Без НДС</div>
+                            <div class="doc-dropdown__row">НДС (18%)</div>
+                            <div class="doc-dropdown__row">НДС (10%)</div>
+                            <div class="doc-dropdown__row doc-dropdown__row_selectable_none">
+                                <label class="doc-dropdown__block">
+                                    <input class="doc-dropdown__radio" type="radio" checked>
                                     НДС включен в стоимость
                                 </label>
-                                <label class="dropdown__block">
-                                    <input class="dropdown__radio" type="radio">
+                                <label class="doc-dropdown__block">
+                                    <input class="doc-dropdown__radio" type="radio">
                                     НДС насчитывается сверху <!-- TODO: Изменить формулировку -->
                                 </label>
                             </div>
@@ -334,7 +334,7 @@
             <div class="doc-sheet-signatures__row">
                 <span class="doc-sheet-signatures__position">Руководитель</span>
                 <span class="doc-sheet-signatures__space">
-                    <button class="doc-sheet-signatures__button">Загрузить роспись</button>
+                    <button class="doc-button doc-button_color_light-gray doc-button_size_20 doc-sheet-signatures__button">Загрузить роспись</button>
                 </span>
                 <span class="doc-sheet-field">
                     <span class="doc-sheet-field__before">(</span>
@@ -345,7 +345,7 @@
             <div class="doc-sheet-signatures__row">
                 <span class="doc-sheet-signatures__position">Главный бухгалтер</span>
                 <span class="doc-sheet-signatures__space">
-                    <button class="doc-sheet-signatures__button">Загрузить роспись</button>
+                    <button class="doc-button doc-button_color_light-gray doc-button_size_20 doc-sheet-signatures__button">Загрузить роспись</button>
                 </span>
                 <span class="doc-sheet-field">
                     <span class="doc-sheet-field__before">(</span>
@@ -357,9 +357,66 @@
 
         <div class="doc-sheet-stamp">
             <div class="doc-sheet-stamp__title">Загрузить печать</div>
-            <button class="doc-sheet-button doc-sheet-stamp__button">Обзор...</button>
+            <button class="doc-button doc-button_color_light-gray doc-button_size_25 doc-sheet-stamp__button">Обзор...</button>
         </div>
 
+    </div>
+
+    <div class="doc-buttons">
+        <div class="doc-buttons__row doc-buttons__row_underline">
+            <button class="doc-button doc-button_color_blue doc-button_save">
+                <i class="doc-button__icon"></i> Сохранить
+            </button>
+            <button class="doc-button doc-button_color_green doc-button_act">
+                <i class="doc-button__icon"></i> Закрыть актом
+            </button>
+            <button class="doc-button doc-button_color_grey doc-button_preview">
+                <i class="doc-button__icon"></i> Предпросмотр
+            </button>
+            <button class="doc-button doc-button_color_grey doc-button_print">
+                <i class="doc-button__icon"></i> Распечатать
+            </button>
+        </div>
+        <div class="doc-buttons__row">
+            <div class="doc-buttons-fieldset">
+                <span class="doc-buttons-fieldset__title">Загрузить в формате</span>
+                <button class="doc-button doc-button_color_grey doc-button_size_small doc-button_pdf">
+                    <i class="doc-button__icon"></i> PDF
+                </button>
+                <button class="doc-button doc-button_color_grey doc-button_size_small doc-button_doc">
+                    <i class="doc-button__icon"></i> DOC
+                </button>
+            </div>
+            <div class="doc-buttons-fieldset">
+                <span class="doc-buttons-fieldset__title">Отправить по почте</span>
+                <span class="doc-field">
+                    <input class="doc-field__input" type="email" placeholder="Электронная почта">
+                </span>
+                <button class="doc-button doc-button_color_grey doc-button_size_small doc-button_doc" type="submit">
+                    <i class="doc-button__icon"></i> Отправить
+                </button>
+            </div>
+            <div class="doc-buttons-fieldset">
+                <span class="doc-buttons-fieldset__title">Выставлять по почте регулярно</span>
+                <div class="doc-dropdown doc-dropdown_appearance_select">
+                    <div class="doc-dropdown__row">Раз в месяц</div>
+                    <div class="doc-dropdown__row">Раз в год</div>
+                    <div class="doc-dropdown__row">
+                        Раз в
+                        <span class="doc-field">
+                            <input class="doc-field__input" type="number" min="1" value="10">
+                        </span>
+                        дней
+                    </div>
+                </div>
+                <span class="doc-field doc-field_block">
+                    <input class="doc-field__input" type="email" placeholder="Электронная почта">
+                </span>
+                <button class="doc-button doc-button_color_grey doc-button_size_small doc-button_doc">
+                    <i class="doc-button__icon"></i> Выставлять регулярно
+                </button>
+            </div>
+        </div>
     </div>
 
     {% include 'footer.html' %}
