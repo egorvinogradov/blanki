@@ -3,4 +3,5 @@ from django.conf.urls.defaults import url, patterns
 
 urlpatterns = patterns('naoplatu.views',
     url(r'^$', 'naoplatu', name='blanki-naoplatu'),
+    url(r'^invoice/$', 'invoice', name='blanki-invoice'),
 )
