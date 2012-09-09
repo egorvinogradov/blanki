@@ -27,3 +27,11 @@ class NaoplatuFilesForm(forms.Form):
     director_sign = forms.FileField()
     booker_sign = forms.FileField()
     printing = forms.FileField()
+
+
+class PositionForm(forms.Form):
+
+    name = forms.CharField()
+    pos_type = forms.CharField(label=u'Единица')
+    number = forms.CharField()
+    price = forms.CharField()
