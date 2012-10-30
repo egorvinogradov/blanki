@@ -85,6 +85,10 @@ input[type='submit'] {
 
 /* common */
 
+html {
+    height: 100%;
+}
+
 .g-nw {
     white-space: nowrap;
 }
@@ -372,7 +376,11 @@ input[type='submit'] {
 /* footer */
 
 .footer {
+    font: 14px/60px 'Open Sans', Arial, sans-serif;
+    font-weight: normal;
+    color: #fff;
     background: #292F35;
+    min-width: 960px;
 }
 
 .footer__inner {
@@ -380,9 +388,6 @@ input[type='submit'] {
     height: 60px;
     margin: 0 auto;
     position: relative;
-    font-size: 14px;
-    line-height: 60px;
-    color: #fff;
 }
 
 .footer__copyright {

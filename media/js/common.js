@@ -2,7 +2,7 @@ $.fn.extend({
 
     /**
      * Работает аналогично jQuery.on, но позволяет передать контекст в обработчик события.
-     * @usage $('.button')._on('click', function(){ this.openMenu() }, this)
+     * @example $('.button')._on('click', function(){ this.openMenu({ speed: 300 }) }, this)
      *
      * @param {string} eventName Имя события.
      * @param {function} handler Обработчик события.
@@ -18,7 +18,7 @@ Blanki.extend = function(parent){
     
     /**
      * Возвращает новый модуль, отнаследованный от родительского, сохранив все его методы.
-     * @usage var childModule = Blanki.extend(parentModule)
+     * @example var childModule = Blanki.extend(parentModule)
      * @param {function} parent Конструктор родительского модуля.
      */
     var child = function(){
@@ -40,7 +40,7 @@ Blanki.Base.prototype.getNodes = function(selectors){
 
     /**
      * Создает объекты jQuery из объекта с селекторами
-     * @usage this.els = this.getNodes(this.settings.selectors)
+     * @example this.els = this.getNodes(this.settings.selectors)
      * @param {object} selectors Объект с селекторами.
      */
     var nodes = {},
