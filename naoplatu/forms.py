@@ -1,5 +1,6 @@
 #encoding:utf-8
 from django import forms
+from django.forms.formsets import formset_factory
 
 
 class NaoplatuForm(forms.Form):
@@ -35,3 +36,5 @@ class PositionForm(forms.Form):
     pos_type = forms.CharField(label=u'Единица')
     number = forms.CharField()
     price = forms.CharField()
+
+PositionFormSet = formset_factory(PositionForm)
