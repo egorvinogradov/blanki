@@ -61,7 +61,7 @@
     </div>
     <div class="auth-registration auth-dropdown">
         <div class="auth-title">Регистрация</div>
-        <form class="auth-form">
+        <form class="auth-form" method="post" action="{% url registration_register %}">{% csrf_token %}
             <div class="auth-form__field-wrapper">
                 <input class="auth-form__field" name="email" type="email" placeholder="E-mail">
             </div>
