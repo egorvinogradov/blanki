@@ -7,5 +7,9 @@ urlpatterns = patterns('',
     url(r'^$', 'views.home', name='home'),
     url(r'^na-?oplatu/', include('naoplatu.urls')),
     url(r'^admin1254/', include(admin.site.urls)),
-    (r'^accounts/', include('registration.backends.default.urls')),
+    url(r'^accounts/register/$', 'registration.views.register',
+        {'backend': 'accounts.backend.BlankiBackend'},
+        name='registration_register'),
+    url(r'^accounts/', include('registration.backends.default.urls')),
+
 )
