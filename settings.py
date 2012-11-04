@@ -122,6 +122,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'annoying',
     'south',
+    'registration',
     'social_auth',
     'webodt',
 
@@ -157,3 +158,5 @@ WEBODT_CONVERTER = 'webodt.converters.openoffice.OpenOfficeODFConverter'
 PYTILS_SHOW_VALUES_ON_ERROR = False
 
 COMMENTS_APP = 'comments'
+
+ACCOUNT_ACTIVATION_DAYS = 7

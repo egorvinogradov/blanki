@@ -1,5 +1,6 @@
-django==1.4.2
+Django==1.4.2
 django-annoying==0.7.6
 South==0.7.6
 -e git://github.com/NetAngels/django-webodt.git@de9f48dc2ed9fbdd9755040e32e16e8de0d5949f#egg=django-webodt
 -e git://github.com/krvss/django-social-auth.git@7f57fe1d201201c0c38a34cf630fd3c979095f1e#egg=django-social-auth
+-e hg+https://bitbucket.org/ubernostrum/django-registration@1086c6a#egg=django-registration
