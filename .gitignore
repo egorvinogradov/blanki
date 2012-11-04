@@ -12,3 +12,4 @@ env/
 src/
 static/
 localsettings.py
+blanki.sqlite

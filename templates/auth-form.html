@@ -14,25 +14,25 @@
         <div class="auth__caption auth-title">Вход с помощью</div>
         <ul class="auth-social">
             <li class="auth-social__service auth-social_service_yandex">
-                <a class="auth-social__service-link" href="#" title="Яндекс"></a>
+                <a class="auth-social__service-link" href="{% url socialauth_begin 'yandex' %}" title="Яндекс"></a>
             </li>
             <li class="auth-social__service auth-social_service_google">
-                <a class="auth-social__service-link" href="#" title="Google"></a>
+                <a class="auth-social__service-link" href="{% url socialauth_begin 'google' %}" title="Google"></a>
             </li>
             <li class="auth-social__service auth-social_service_vkontakte">
-                <a class="auth-social__service-link" href="#" title="ВКонтакте"></a>
+                <a class="auth-social__service-link" href="{% url socialauth_begin 'vkontakte' %}" title="ВКонтакте"></a>
             </li>
             <li class="auth-social__service auth-social_service_odnoklassniki">
-                <a class="auth-social__service-link" href="#" title="Одноклассники"></a>
+                <a class="auth-social__service-link" href="{% url socialauth_begin 'odnoklassniki' %}" title="Одноклассники"></a>
             </li>
             <li class="auth-social__service auth-social_service_mailru">
-                <a class="auth-social__service-link" href="#" title="Mail.ru"></a>
+                <a class="auth-social__service-link" href="{% url socialauth_begin 'mailru' %}" title="Mail.ru"></a>
             </li>
             <li class="auth-social__service auth-social_service_facebook">
-                <a class="auth-social__service-link" href="#" title="Facebook"></a>
+                <a class="auth-social__service-link" href="{% url socialauth_begin 'facebook' %}" title="Facebook"></a>
             </li>
             <li class="auth-social__service auth-social_service_twitter">
-                <a class="auth-social__service-link" href="#" title="Twitter"></a>
+                <a class="auth-social__service-link" href="{% url socialauth_begin 'twitter' %}" title="Twitter"></a>
             </li>
             <li class="auth-social__service_last"></li>
         </ul>
