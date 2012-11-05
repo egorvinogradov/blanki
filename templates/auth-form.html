@@ -17,7 +17,7 @@
                 <a class="auth-social__service-link" href="{% url socialauth_begin 'yandex' %}" title="Яндекс"></a>
             </li>
             <li class="auth-social__service auth-social_service_google">
-                <a class="auth-social__service-link" href="{% url socialauth_begin 'google' %}" title="Google"></a>
+                <a class="auth-social__service-link" href="{% url socialauth_begin 'google' %}?next={{ project_url }}" title="Google"></a>
             </li>
             <li class="auth-social__service auth-social_service_vkontakte">
                 <a class="auth-social__service-link" href="{% url socialauth_begin 'vkontakte' %}" title="ВКонтакте"></a>

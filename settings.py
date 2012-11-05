@@ -173,8 +173,8 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-TWITTER_CONSUMER_KEY = ''
-TWITTER_CONSUMER_SECRET = ''
+TWITTER_CONSUMER_KEY = 'YoUQdTRtNaS1MKyhfbq2A'
+TWITTER_CONSUMER_SECRET = '0ywaTMEUenz5PhUNU7GVya5txD4fVeCR4JSHL1mv20'
 FACEBOOK_APP_ID = ''
 FACEBOOK_API_SECRET = ''
 GOOGLE_CONSUMER_KEY = ''
@@ -202,6 +202,7 @@ TEMPLATE_CONTEXT_PROCESSORS = \
 django.conf.global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
     'django.contrib.messages.context_processors.messages',
     'django.core.context_processors.request',
+    'context_processors.project_urls',
     'social_auth.context_processors.social_auth_by_name_backends',
     'social_auth.context_processors.social_auth_backends',
     'social_auth.context_processors.social_auth_by_type_backends',
