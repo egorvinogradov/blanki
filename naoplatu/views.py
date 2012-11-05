@@ -4,6 +4,7 @@ from django.shortcuts import redirect
 from django.views.generic import View
 from django.views.generic.base import TemplateResponseMixin
 from naoplatu.forms import InvoiceForm, PositionFormSet, InvoiceFilesForm
+from webodt.shortcuts import render_to_response
 
 
 @render_to('naoplatu/index.html')
@@ -60,5 +61,19 @@ class InvoiceDetailView(View, TemplateResponseMixin):
     http_method_names = ['get', 'post']
 
     def get(self, request, *args, **kwargs):
+        # TODO: Сделать
         context = {}
         return self.render_to_response(context)
+
+    def download(self, request, *args, **kwargs):
+        # TODO: Сделать
+        invoice_format = kwargs['format']
+        template_name = 'naoplatu/docs/invoice.odt'
+        filename = 'test_filename'
+        return render_to_response(template_name, {
+            'invoice': self.invoice,
+        }, filename=filename, format=invoice_format)
+
+    def send_email(self, request, *args, **kwargs):
+        # TODO: Сделать
+        pass
