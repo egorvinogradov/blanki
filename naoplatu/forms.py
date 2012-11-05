@@ -3,7 +3,7 @@ from django import forms
 from django.forms.formsets import formset_factory
 
 
-class NaoplatuForm(forms.Form):
+class InvoiceForm(forms.Form):
 
     org_type = forms.CharField()
     org_name = forms.CharField()
@@ -22,7 +22,7 @@ class NaoplatuForm(forms.Form):
     client_name = forms.CharField()
 
 
-class NaoplatuFilesForm(forms.Form):
+class InvoiceFilesForm(forms.Form):
 
     logo = forms.FileField()
     director_sign = forms.FileField()
