@@ -1,5 +1,6 @@
 * cd blanki/
 * virtualenv env
 * pip install -r requirements.txt
+* Sync db: ./manage.py syncdb --all
 * ./manage.py runserver 8001
 * Go to http://127.0.0.1:8001/
