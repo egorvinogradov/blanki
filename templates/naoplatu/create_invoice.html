@@ -29,8 +29,12 @@
             </i>
             <div class="doc-tips__heading">Совет</div>
             <ul class="doc-tips__nav">
-                <li class="doc-tips__nav-item doc-tips__nav-item_hide">Больше не показывать</li>
-                <li class="doc-tips__nav-item doc-tips__nav-item_next">Ещё совет &rarr;</li>
+                <li class="doc-tips__nav-item doc-tips__nav-item_hide">
+                    <span class="doc-tips__nav-item-inner">Больше не показывать</span>
+                </li>
+                <li class="doc-tips__nav-item doc-tips__nav-item_next">
+                    <span class="doc-tips__nav-item-inner">Ещё совет</span> &rarr;
+                </li>
             </ul>
             <div class="doc-tips__text">
                 Чтобы сохранить счет, а также получить возможность генерировать и присылать новые счета регулярно &mdash;
@@ -47,7 +51,9 @@
             <div class="doc-sheet-block">
                 <div class="doc-sheet-logo">
                     <div class="doc-sheet-logo__title">Загрузить логотип</div>
-                    <button class="doc-button doc-button_color_light-grey doc-button_size_25 doc-sheet-logo__button">Обзор...</button>
+                    <button class="doc-button doc-button_color_light-grey doc-button_size_25 doc-sheet-logo__button">
+                        <span class="doc-button__inner">Обзор...</span>
+                    </button>
                 </div>
                 <div class="doc-sheet-org-info">
                     <div class="doc-sheet-row">
@@ -249,9 +255,13 @@
                         </td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
                             <span class="doc-field doc-field_number doc-field_size_20">
-                                <button class="doc-field_number__decrease doc-button doc-button_color_light-grey">&minus;</button>
+                                <button class="doc-field_number__decrease doc-button doc-button_color_light-grey">
+                                    <span class="doc-button__inner">&minus;</span>
+                                </button>
                                 <input class="doc-field__input" type="number" min="1" value="1">
-                                <button class="doc-field_number__increase doc-button doc-button_color_light-grey">+</button>
+                                <button class="doc-field_number__increase doc-button doc-button_color_light-grey">
+                                    <span class="doc-button__inner">+</span>
+                                </button>
                             </span>
                         </td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
@@ -275,9 +285,13 @@
                         </td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
                             <span class="doc-field doc-field_number doc-field_size_20">
-                                <button class="doc-field_number__decrease doc-button doc-button_color_light-grey">&minus;</button>
+                                <button class="doc-field_number__decrease doc-button doc-button_color_light-grey">
+                                    <span class="doc-button__inner">&minus;</span>
+                                </button>
                                 <input class="doc-field__input" type="number" min="1" value="1">
-                                <button class="doc-field_number__increase doc-button doc-button_color_light-grey">+</button>
+                                <button class="doc-field_number__increase doc-button doc-button_color_light-grey">
+                                    <span class="doc-button__inner">+</span>
+                                </button>
                             </span>
                         </td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
@@ -290,8 +304,10 @@
                     <tr>
                         <td class="doc-sheet-table__td doc-sheet-table__border_none" colspan="2" rowspan="3">
                             <button class="doc-button doc-button_color_light-grey doc-button_size_28 doc-button_add">
-                                <i class="doc-button__icon"></i>
-                                Добавить ещё
+                                <span class="doc-button__inner">
+                                    <i class="doc-button__icon"></i>
+                                    Добавить ещё
+                                </span>
                             </button>
                         </td>
                         <td class="doc-sheet-table__td doc-sheet-table__border_none doc-sheet-table__td_align_right" colspan="3">Итого</td>
@@ -343,7 +359,9 @@
                 <div class="doc-sheet-signatures__row">
                     <span class="doc-sheet-signatures__position">Руководитель</span>
                     <span class="doc-sheet-signatures__space">
-                        <button class="doc-button doc-button_color_light-grey doc-button_size_20 doc-sheet-signatures__button" name="director_sign">Загрузить роспись</button>
+                        <button class="doc-button doc-button_color_light-grey doc-button_size_20 doc-sheet-signatures__button" name="director_sign">
+                            <span class="doc-button__inner">Загрузить роспись</span>
+                        </button>
                     </span>
                     <span class="doc-sheet-field">
                         <span class="doc-sheet-field__before">(</span>
@@ -354,7 +372,9 @@
                 <div class="doc-sheet-signatures__row">
                     <span class="doc-sheet-signatures__position">Главный бухгалтер</span>
                     <span class="doc-sheet-signatures__space">
-                        <button class="doc-button doc-button_color_light-grey doc-button_size_20 doc-sheet-signatures__button" name="booker_sign">Загрузить роспись</button>
+                        <button class="doc-button doc-button_color_light-grey doc-button_size_20 doc-sheet-signatures__button" name="booker_sign">
+                            <span class="doc-button__inner">Загрузить роспись</span>
+                        </button>
                     </span>
                     <span class="doc-sheet-field">
                         <span class="doc-sheet-field__before">(</span>
@@ -366,7 +386,9 @@
 
             <div class="doc-sheet-stamp">
                 <div class="doc-sheet-stamp__title">Загрузить печать</div>
-                <button class="doc-button doc-button_color_light-grey doc-button_size_25 doc-sheet-stamp__button" name="printing">Обзор...</button>
+                <button class="doc-button doc-button_color_light-grey doc-button_size_25 doc-sheet-stamp__button" name="printing">
+                    <span class="doc-button__inner">Обзор...</span>
+                </button>
             </div>
 
         </div>
@@ -374,26 +396,38 @@
         <div class="doc-buttons">
             <div class="doc-buttons__row doc-buttons__row_underline">
                 <button class="doc-button doc-button_color_blue doc-button_save">
-                    <i class="doc-button__icon"></i> Сохранить
+                    <span class="doc-button__inner">
+                        <i class="doc-button__icon"></i> Сохранить
+                    </span>
                 </button>
                 <button class="doc-button doc-button_color_green doc-button_act">
-                    <i class="doc-button__icon"></i> Закрыть актом
+                    <span class="doc-button__inner">
+                        <i class="doc-button__icon"></i> Закрыть актом
+                    </span>
                 </button>
                 <button class="doc-button doc-button_color_grey doc-button_preview">
-                    <i class="doc-button__icon"></i> Предпросмотр
+                    <span class="doc-button__inner">
+                        <i class="doc-button__icon"></i> Предпросмотр
+                    </span>
                 </button>
                 <button class="doc-button doc-button_color_grey doc-button_print">
-                    <i class="doc-button__icon"></i> Распечатать
+                    <span class="doc-button__inner">
+                        <i class="doc-button__icon"></i> Распечатать
+                    </span>
                 </button>
             </div>
             <div class="doc-buttons__row">
                 <div class="doc-buttons-fieldset">
                     <span class="doc-buttons-fieldset__title">Загрузить в формате</span>
                     <button class="doc-button doc-button_color_grey doc-button_size_28 doc-button_pdf">
-                        <i class="doc-button__icon"></i> PDF
+                        <span class="doc-button__inner">
+                            <i class="doc-button__icon"></i> PDF
+                        </span>
                     </button>
                     <button class="doc-button doc-button_color_grey doc-button_size_28 doc-button_doc">
-                        <i class="doc-button__icon"></i> DOC
+                        <span class="doc-button__inner">
+                            <i class="doc-button__icon"></i> DOC
+                        </span>
                     </button>
                 </div>
                 <div class="doc-buttons-fieldset">
@@ -402,7 +436,9 @@
                         <input class="doc-field__input" type="email" placeholder="Электронная почта">
                     </span>
                     <button class="doc-button doc-button_color_grey doc-button_size_28 doc-button_doc" type="submit">
-                        <i class="doc-button__icon"></i> Отправить
+                        <span class="doc-button__inner">
+                            <i class="doc-button__icon"></i> Отправить
+                        </span>
                     </button>
                 </div>
                 <div class="doc-buttons-fieldset">
@@ -422,7 +458,9 @@
                         <input class="doc-field__input" type="email" placeholder="Электронная почта">
                     </span>
                     <button class="doc-button doc-button_color_grey doc-button_size_28 doc-button_doc">
-                        <i class="doc-button__icon"></i> Выставлять регулярно
+                        <span class="doc-button__inner">
+                            <i class="doc-button__icon"></i> Выставлять регулярно
+                        </span>
                     </button>
                 </div>
             </div>
