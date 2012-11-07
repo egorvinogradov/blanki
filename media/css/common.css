@@ -93,6 +93,10 @@ html {
     white-space: nowrap;
 }
 
+.input, button, textarea {
+    font-family: Arial, sans-serif;
+}
+
 /* / common */
 
 /* auth */

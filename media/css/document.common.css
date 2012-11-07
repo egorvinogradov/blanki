@@ -588,5 +588,114 @@
 
 /* / buttons */
 
+/* inputs */
+
+.doc-sheet-field__input {
+    color: #2c333b;
+    font-size: 15px;
+    line-height: 18px;
+    border-bottom: 1px dotted #797C80;
+    padding: 1px 1px 0 1px;
+    border-radius: 3px;
+}
+
+.doc-sheet-field__input:focus {
+    border: 1px solid #50ACEC;
+    box-shadow: 0 0 5px #65C1FF;
+    outline: none;
+    padding: 0;
+}
+
+.doc-field__input {
+    background: #fff;
+    color: #2c333b;
+    font-size: 13px;
+    border-radius: 2px;
+    border: 1px solid #ADADAD;
+    border-top-color: #7C7C7C;
+    border-bottom-color: #B3B3B3;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.24);
+}
+
+.doc-field__input:focus {
+    border: 1px solid #50ACEC;
+    outline: none;
+    padding: 0;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.24),
+                0 0 5px #65C1FF;
+}
+
+.doc-sheet-field__input::-webkit-input-placeholder {
+    color: #99aab1;
+}
+
+.doc-sheet-field__input:-moz-placeholder {
+    color: #99aab1;
+}
+
+.doc-sheet-field__input:-ms-input-placeholder {
+    color: #99aab1;
+}
+
+.doc-field__input::-webkit-input-placeholder {
+    color: #99aab1;
+}
+
+.doc-field__input:-moz-placeholder {
+    color: #99aab1;
+}
+
+.doc-field__input:-ms-input-placeholder {
+    color: #99aab1;
+}
+
+.doc-sheet-field {
+    display: inline-block;
+    line-height: 18px;
+}
+
+.doc-sheet-field__before,
+.doc-sheet-field__after {
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.doc-sheet-field__before {
+    margin-right: -2px;
+}
+
+.doc-sheet-field__after {
+    margin-left: -2px;
+}
+
+.doc-field_number {
+    line-height: 21px;
+    overflow: hidden;
+}
+
+.doc-field_number .doc-field__input {
+    line-height: 21px;
+    width: 25px;
+    padding: 0 24px;
+    float: left;
+    margin-left: -23px;
+    text-align: center;
+}
+
+.doc-field_number .doc-button {
+    line-height: 21px;
+    padding: 0;
+    text-align: center;
+    width: 23px;
+    float: left;
+    position: relative;
+}
+
+.doc-field_number__increase {
+    margin-left: -23px;
+}
+
+/* / inputs */
+
 
 
