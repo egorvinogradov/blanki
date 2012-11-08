@@ -181,8 +181,8 @@ GOOGLE_CONSUMER_KEY = ''
 GOOGLE_CONSUMER_SECRET = ''
 GOOGLE_OAUTH2_CLIENT_ID = ''
 GOOGLE_OAUTH2_CLIENT_SECRET = ''
-VK_APP_ID = ''
-VK_API_SECRET = ''
+VKONTAKTE_APP_ID = '3224611'
+VKONTAKTE_APP_SECRET = 'qtRWXzngtAnXzzqEitfk'
 MAILRU_OAUTH2_CLIENT_KEY = ''
 MAILRU_OAUTH2_CLIENT_SECRET = ''
 ODNOKLASSNIKI_OAUTH2_APP_KEY = ''
@@ -208,3 +208,5 @@ django.conf.global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
     'social_auth.context_processors.social_auth_by_type_backends',
     'social_auth.context_processors.social_auth_login_redirect',
 )
+
+VKONTAKTE_LOCAL_HTML = 'accounts/vkontakte.html'
