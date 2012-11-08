@@ -166,29 +166,25 @@ AUTHENTICATION_BACKENDS = (
     'social_auth.backends.twitter.TwitterBackend',
     'social_auth.backends.facebook.FacebookBackend',
     'social_auth.backends.google.GoogleBackend',
-    'social_auth.backends.contrib.vkontakte.VKontakteBackend',
+    'social_auth.backends.contrib.vkontakte.VKontakteOAuth2',
     'social_auth.backends.contrib.mailru.MailruBackend',
     'social_auth.backends.contrib.odnoklassniki.OdnoklassnikiBackend',
-    'social_auth.backends.contrib.yandex.YaruBackend',
+    'social_auth.backends.contrib.yandex.YandexOAuth2Backend',
     'django.contrib.auth.backends.ModelBackend',
 )
 
 TWITTER_CONSUMER_KEY = 'YoUQdTRtNaS1MKyhfbq2A'
 TWITTER_CONSUMER_SECRET = '0ywaTMEUenz5PhUNU7GVya5txD4fVeCR4JSHL1mv20'
-FACEBOOK_APP_ID = ''
-FACEBOOK_API_SECRET = ''
-GOOGLE_CONSUMER_KEY = ''
-GOOGLE_CONSUMER_SECRET = ''
-GOOGLE_OAUTH2_CLIENT_ID = ''
-GOOGLE_OAUTH2_CLIENT_SECRET = ''
+FACEBOOK_APP_ID = '225299480934693'
+FACEBOOK_API_SECRET = 'f7ec1e0be814acd383967a076910b83c'
 VKONTAKTE_APP_ID = '3224611'
 VKONTAKTE_APP_SECRET = 'qtRWXzngtAnXzzqEitfk'
-MAILRU_OAUTH2_CLIENT_KEY = ''
-MAILRU_OAUTH2_CLIENT_SECRET = ''
-ODNOKLASSNIKI_OAUTH2_APP_KEY = ''
+MAILRU_OAUTH2_CLIENT_KEY = '691619'
+MAILRU_OAUTH2_CLIENT_SECRET = '22634f3c9afa21ef0f1d21eff47d6924'
+ODNOKLASSNIKI_OAUTH2_CLIENT_KEY = ''
 ODNOKLASSNIKI_OAUTH2_CLIENT_SECRET = ''
-YANDEX_APP_ID = ''
-YANDEX_API_SECRET = ''
+YANDEX_APP_ID = '32f78f86441c41a3ac28508a24f10524'
+YANDEX_API_SECRET = '97d62db3f7724dadbe789750e3fb7f54'
 
 LOGIN_URL = '/login-form/'
 LOGIN_REDIRECT_URL = '/logged-in/'
