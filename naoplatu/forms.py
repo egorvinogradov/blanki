@@ -1,40 +1,55 @@
-#encoding:utf-8
+# encoding:utf-8
 from django import forms
 from django.forms.formsets import formset_factory
+from naoplatu.models import Invoice, InvoicePosition
 
 
-class InvoiceForm(forms.Form):
+class InvoiceForm(forms.ModelForm):
 
-    org_type = forms.CharField()
-    org_name = forms.CharField()
-    org_phone_type = forms.CharField()
-    org_phone_value = forms.CharField()
-    org_address = forms.CharField()
-    org_inn = forms.CharField()
-    org_cat = forms.CharField()
-    number = forms.CharField()
-    date = forms.DateField()
-    org_bank = forms.CharField()
-    org_bic = forms.CharField()
-    org_bank_number = forms.CharField()
-    wtf_number = forms.CharField()
-    client_type = forms.CharField()
-    client_name = forms.CharField()
+    class Meta:
+        model = Invoice
+        fields = [
+            'org_type', 'org_name', 'org_phone_type', 'org_phone_value',
+            'org_address', 'org_inn', 'org_cat', 'number', 'date', 'org_bank',
+            'org_bic', 'org_bank_number', 'wtf_number', 'client_type',
+            'client_name',
+        ]
 
 
-class InvoiceFilesForm(forms.Form):
+class InvoiceFilesForm(forms.ModelForm):
 
-    logo = forms.FileField()
-    director_sign = forms.FileField()
-    booker_sign = forms.FileField()
-    printing = forms.FileField()
+    class Meta:
+        model = Invoice
+        fields = ['logo', 'director_sign', 'booker_sign', 'printing']
 
 
 class PositionForm(forms.Form):
 
-    name = forms.CharField()
-    pos_type = forms.CharField(label=u'Единица')
-    number = forms.CharField()
-    price = forms.CharField()
+    class Meta:
+        model = InvoicePosition
+        fields = ['name', 'pos_type', 'number', 'price']
 
 PositionFormSet = formset_factory(PositionForm)
+
+
+class SendMailForm(forms.ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        super(SendMailForm, self).__init__(*args, **kwargs)
+        self.fields['org_email'].required = True
+
+    class Meta:
+        model = Invoice
+        fields = ['org_email']
+
+
+class RegularForm(forms.ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        super(RegularForm, self).__init__(*args, **kwargs)
+        self.fields['org_email'].required = True
+        self.fields['regular_period'].required = True
+
+    class Meta:
+        model = Invoice
+        fields = ['org_email', 'regular_period']

@@ -26,8 +26,12 @@ class Invoice(models.Model):
     booker_sign = models.FileField()
     printing = models.FileField()
 
+    org_email = models.EmailField()
+    is_regular = models.BooleanField(default=False)
+    regular_period = models.PositiveIntegerField()  # In days
+
     def get_absolute_url(self):
-        return reverse('')
+        return reverse('blanki-invoice-detail', kwargs={'invoice_id': self.id})
 
 
 class InvoicePosition(models.Model):
