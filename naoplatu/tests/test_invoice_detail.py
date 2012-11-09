@@ -12,3 +12,6 @@ class InvoiceDetailTest(test.TestCase):
 
     def test_send_email(self):
         pass
+
+    def test_regular(self):
+        pass
