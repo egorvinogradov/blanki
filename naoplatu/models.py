@@ -38,6 +38,6 @@ class InvoicePosition(models.Model):
 
     invoice = models.ForeignKey('Invoice')
     name = models.CharField()
-    pos_type = models.CharField(label=u'Единица')
+    pos_type = models.CharField(u'Единица')
     number = models.CharField()
     price = models.CharField()
