@@ -57,12 +57,14 @@
                 </div>
                 <div class="doc-sheet-org-info">
                     <div class="doc-sheet-row">
-                        <select class="doc-sheet-select" name="org_type">
-                            <option selected>ООО</option>
-                            <option>ОАО</option>
-                            <option>ЗАО</option>
-                            <!-- TODO: Узнать все варианты -->
-                        </select>
+                        <span class="doc-sheet-select">
+                            <select class="doc-sheet-select__el" name="org_type">
+                                <option selected>ООО</option>
+                                <option>ОАО</option>
+                                <option>ЗАО</option>
+                                <!-- TODO: Узнать все варианты -->
+                            </select>
+                        </span>
                         <span class="doc-sheet-field">
                             <span class="doc-sheet-field__before">&laquo;</span>
                             <input class="doc-sheet-field__input" type="text" value="Первая межгалактическая корпорация" name="org_name">
@@ -74,13 +76,15 @@
                             <input class="doc-sheet-field__input" type="text" value="115093, Москва, ул. Космонавтов, д. 42" name="org_address">
                         </span>
                     </div>
-                    <div class="doc-sheet-row" name="org_phone_type">
-                        <select class="doc-sheet-select">
-                            <option>Телефон/факс</option>
-                            <option>Телефон</option>
-                            <option>Факс</option>
-                            <option>E-mail</option>
-                        </select>:
+                    <div class="doc-sheet-row">
+                        <span class="doc-sheet-select">
+                            <select class="doc-sheet-select__el" name="org_phone_type">
+                                <option>Телефон/факс</option>
+                                <option>Телефон</option>
+                                <option>Факс</option>
+                                <option>E-mail</option>
+                            </select>
+                        </span>:
                         <span class="doc-sheet-field">
                             <input class="doc-sheet-field__input" type="text" value="+7 (495) 123-77-77, +7 (495) 123-77-78" name="org_phone_value">
                         </span>
@@ -128,11 +132,13 @@
                                 <div class="doc-sheet-row">Получатель</div>
                                 <div class="doc-sheet-row">
                                     <!-- TODO: Узнать, может ли это отличаться от названия фирмы выше, в реквизитах -->
-                                    <select class="doc-sheet-select" name="org_type">
-                                        <option selected>ООО</option>
-                                        <option>ОАО</option>
-                                        <option>ЗАО</option>
-                                    </select>
+                                    <span class="doc-sheet-select">
+                                        <select class="doc-sheet-select__el" name="org_type">
+                                            <option selected>ООО</option>
+                                            <option>ОАО</option>
+                                            <option>ЗАО</option>
+                                        </select>
+                                    </span>
                                     <span class="doc-sheet-field">
                                         <span class="doc-sheet-field__before">&laquo;</span>
                                         <input class="doc-sheet-field__input" type="text" value="Первая межгалактическая корпорация" name="org_name">
@@ -190,11 +196,13 @@
                         <!-- TODO: Узнать, правильно ли писать "Плательщик" и "Получатель" -->
                         <td class="doc-sheet-table__td">Плательщик:</td>
                         <td class="doc-sheet-table__td">
-                            <select class="doc-sheet-select" name="client_type">
-                                <option>ООО</option>
-                                <option selected>ОАО</option>
-                                <option>ЗАО</option>
-                            </select>
+                            <span class="doc-sheet-select">
+                                <select class="doc-sheet-select__el" name="client_type">
+                                    <option>ООО</option>
+                                    <option selected>ОАО</option>
+                                    <option>ЗАО</option>
+                                </select>
+                            </span>
                             <span class="doc-sheet-field">
                                 <span class="doc-sheet-field__before">&laquo;</span>
                                 <input class="doc-sheet-field__input" type="text" value="Объединённый космический альянс" name="client_name">
@@ -206,11 +214,13 @@
                         <td class="doc-sheet-table__td">Получатель:</td>
                         <td class="doc-sheet-table__td">
                             <!-- TODO: Узнать, может ли это отличаться от названия фирмы выше, в реквизитах -->
-                            <select class="doc-sheet-select" name="org_type">
-                                <option selected>ООО</option>
-                                <option>ОАО</option>
-                                <option>ЗАО</option>
-                            </select>
+                            <span class="doc-sheet-select">
+                                <select class="doc-sheet-select__el" name="org_type">
+                                    <option selected>ООО</option>
+                                    <option>ОАО</option>
+                                    <option>ЗАО</option>
+                                </select>
+                            </span>
                             <span class="doc-sheet-field">
                                 <span class="doc-sheet-field__before">&laquo;</span>
                                 <input class="doc-sheet-field__input" type="text" value="Первая межгалактическая корпорация" name="org_name">
@@ -254,12 +264,12 @@
                             </span>
                         </td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
-                            <span class="doc-field doc-field_number">
-                                <button class="doc-field_number__decrease doc-button">
+                            <span class="doc-field doc-field_range">
+                                <button class="doc-field_range__decrease doc-button">
                                     <span class="doc-button__inner">&minus;</span>
                                 </button>
-                                <input class="doc-field__input doc-field__input_type_number" min="1" value="1">
-                                <button class="doc-field_number__increase doc-button">
+                                <input class="doc-field__input" min="1" value="1">
+                                <button class="doc-field_range__increase doc-button">
                                     <span class="doc-button__inner">+</span>
                                 </button>
                             </span>
@@ -284,12 +294,12 @@
                             </span>
                         </td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
-                            <span class="doc-field doc-field_number">
-                                <button class="doc-field_number__decrease doc-button">
+                            <span class="doc-field doc-field_range">
+                                <button class="doc-field_range__decrease doc-button">
                                     <span class="doc-button__inner">&minus;</span>
                                 </button>
-                                <input class="doc-field__input doc-field__input_type_number" min="1" value="1">
-                                <button class="doc-field_number__increase doc-button">
+                                <input class="doc-field__input" min="1" value="1">
+                                <button class="doc-field_range__increase doc-button">
                                     <span class="doc-button__inner">+</span>
                                 </button>
                             </span>
@@ -435,10 +445,8 @@
                     <span class="doc-field">
                         <input class="doc-field__input" type="email" placeholder="Электронная почта">
                     </span>
-                    <button class="doc-button doc-button_color_grey doc-button_size_28 doc-button_doc doc-button_bottom-control" type="submit">
-                        <span class="doc-button__inner">
-                            <i class="doc-button__icon"></i> Отправить
-                        </span>
+                    <button class="doc-button doc-button_color_grey doc-button_size_28 doc-button_bottom-control" type="submit">
+                        <span class="doc-button__inner">Отправить</span>
                     </button>
                 </div>
                 <div class="doc-buttons-fieldset">
@@ -448,19 +456,17 @@
                         <div class="doc-dropdown__row">Раз в год</div>
                         <div class="doc-dropdown__row">
                             Раз в
-                            <span class="doc-field">
-                                <input class="doc-field__input doc-field__input_type_number" min="1" value="10">
+                            <span class="doc-field doc-field_number doc-field_size_20">
+                                <input class="doc-field__input" min="1" value="10">
                             </span>
                             дней
                         </div>
                     </div>
-                    <span class="doc-field doc-field_block">
+                    <span class="doc-field">
                         <input class="doc-field__input" type="email" placeholder="Электронная почта">
                     </span>
-                    <button class="doc-button doc-button_color_grey doc-button_size_28 doc-button_doc doc-button_bottom-control">
-                        <span class="doc-button__inner">
-                            <i class="doc-button__icon"></i> Выставлять регулярно
-                        </span>
+                    <button class="doc-button doc-button_color_grey doc-button_size_28 doc-button_bottom-control">
+                        <span class="doc-button__inner">Выставлять регулярно</span>
                     </button>
                 </div>
             </div>
