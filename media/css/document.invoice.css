@@ -4,4 +4,30 @@
 	background: #E9EEF0;
 }
 
+/* layout */
+
+.doc-sheet-logo {
+    border: 1px solid #CDCDCD;
+    float: left;
+    padding: 11px 12px;
+    border-radius: 3px;
+    margin-right: 23px;
+}
+
+.doc-sheet-logo__title {
+    text-align: center;
+    color: #69787F;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 7px;
+}
+
+.doc-sheet-org-info {
+    overflow: hidden;
+}
+
+/* / layout */
+
+
+
 
