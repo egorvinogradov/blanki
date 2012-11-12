@@ -30,6 +30,9 @@ class Invoice(models.Model):
     is_regular = models.BooleanField(default=False)
     regular_period = models.PositiveIntegerField()  # In days
 
+    created = models.DateField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
     def get_absolute_url(self):
         return reverse('blanki-invoice-detail', kwargs={'invoice_id': self.id})
 

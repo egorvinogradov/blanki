@@ -15,3 +15,6 @@ class InvoiceDetailTest(test.TestCase):
 
     def test_regular(self):
         pass
+
+    def test_close_with_act(self):
+        pass
