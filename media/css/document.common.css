@@ -598,11 +598,6 @@
     border-bottom: 1px dotted #797C80;
     padding: 1px 1px 0 1px;
     border-radius: 3px;
-/*    -webkit-transition: box-shadow .2s ease, border-color .3s ease;
-    -moz-transition: box-shadow .2s ease, border-color .3s ease;
-    -ms-transition: box-shadow .2s ease, border-color .3s ease;
-    -o-transition: box-shadow .2s ease, border-color .3s ease;
-    transition: box-shadow .2s ease, border-color .3s ease;*/
 }
 
 .doc-sheet-field__input:focus {
@@ -618,15 +613,11 @@
     text-indent: 5px;
     border-radius: 2px;
     font: 13px/28px Arial, sans-serif;
+    height: 28px;
     border: 1px solid #ADADAD;
     border-top-color: #7C7C7C;
     border-bottom-color: #B3B3B3;
     box-shadow: inset 0 1px 2px rgba(0,0,0,.24);
-/*    -webkit-transition: box-shadow .2s ease, border-color .3s ease;
-    -moz-transition: box-shadow .2s ease, border-color .3s ease;
-    -ms-transition: box-shadow .2s ease, border-color .3s ease;
-    -o-transition: box-shadow .2s ease, border-color .3s ease;
-    transition: box-shadow .2s ease, border-color .3s ease;*/
 }
 
 .doc-field__input:focus {
@@ -688,6 +679,7 @@
 
 .doc-field_range .doc-field__input {
     line-height: 21px;
+    height: 21px;
     width: 25px;
     padding: 0 24px;
     float: left;
@@ -711,6 +703,7 @@
 
 .doc-field_size_20 .doc-field__input {
     line-height: 20px;
+    height: 20px;
     text-indent: 3px;
 }
 
