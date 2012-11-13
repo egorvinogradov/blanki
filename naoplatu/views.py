@@ -9,6 +9,7 @@ from django.views.generic import View
 from django.views.generic.base import TemplateResponseMixin
 from naoplatu.forms import InvoiceForm, PositionFormSet, InvoiceFilesForm, \
     SendMailForm, RegularForm
+from naoplatu.models import Invoice
 from webodt.converters import converter
 from webodt.shortcuts import render_to_response
 import webodt
@@ -17,6 +18,12 @@ import webodt
 @render_to('naoplatu/index.html')
 def naoplatu(request):
     return {}
+
+
+@render_to('naoplatu/invoice_list.html')
+def invoice_list(request):
+    invoices = Invoice.objects.filter(user=request.user).order_by('-created')
+    return {'invoices': invoices}
 
 
 class CreateInvoiceView(View, TemplateResponseMixin):
@@ -65,11 +72,15 @@ class InvoiceDetailView(View, TemplateResponseMixin):
 
     template_name = 'naoplatu/invoice_detail.html'
     document_name = 'naoplatu/docs/invoice.odt'
-    one_send_subject_template_name = 'mails/one_send_subject.txt'
-    one_send_text_template_name = 'mails/one_send_text_content.txt'
-    one_send_html_template_name = 'mails/one_send_html_content.html'
-    one_filename_template = 'invoice-{0}.pdf'
-    one_send_success_message = u'Письмо с выставленным счётом успешно отправлено'
+    one_send_conf = {
+        'template_name': {
+            'subject': 'mails/one_send_subject.txt',
+            'text': 'mails/one_send_text_content.txt',
+            'html': 'mails/one_send_html_content.html',
+        },
+        'document_name_template': 'invoice-{0}.pdf',
+        'success_message': u'Письмо с выставленным счётом успешно отправлено',
+    }
 
     http_method_names = ['get', 'post']
 
@@ -96,23 +107,28 @@ class InvoiceDetailView(View, TemplateResponseMixin):
             doc_context = {'invoice': invoice}
             document = template.render(Context(doc_context))
             pdf = converter().convert(document, format='pdf')
+            conf = self.one_send_conf
             subject = render_to_string(
-                self.one_send_subject_template_name, doc_context,
+                conf['template_name']['subject'], doc_context,
             ).strip()
             text_content = render_to_string(
-                self.one_send_text_template_name, doc_context,
+                conf['template_name']['text'], doc_context,
             ).srtip()
             html_content = render_to_string(
-                self.one_send_html_template_name, doc_context,
+                conf['template_name']['html'], doc_context,
             ).srtip()
             msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
             msg.attach_alternative(html_content, "text/html")
-            filename = self.one_filename_template.format(invoice.id)
+            filename = conf['document_name_template'].format(invoice.id)
             msg.attach(filename, pdf.read(), 'application/pdf')
             msg.send()
-            messages.success(request, self.one_send_success_message)
+            messages.success(request, conf['success_message'])
         context = {'mail_form': form, 'invoice': invoice}
         return self.render_to_response(context)
+
+    def remind_email(self, request, *args, **kwargs):
+        # TODO: Сделать
+        pass
 
     def regular(self, request, *args, **kwargs):
         # TODO: Проверить
@@ -123,3 +139,48 @@ class InvoiceDetailView(View, TemplateResponseMixin):
             invoice.save()
         context = {'regular_form': form, 'invoice': invoice}
         return self.render_to_response(context)
+
+    def dublicate(self, request, *args, **kwargs):
+        # TODO: Сделать
+        pass
+
+    def edit(self, request, *args, **kwargs):
+        # TODO: Сделать
+        pass
+
+    def mark_paid(self, request, *args, **kwargs):
+        # TODO: Сделать
+        pass
+
+    def close_with_act(self, request, *args, **kwargs):
+        # TODO: Сделать форму
+        pass
+
+    def delete(self, request, *args, **kwargs):
+        # TODO: Сделать
+        pass
+
+
+class ActDetailView(View, TemplateResponseMixin):
+
+    http_method_names = ['get', 'post']
+
+    def get(self, request, *args, **kwargs):
+        # TODO: Сделать
+        context = {}
+        return self.render_to_response(context)
+
+    def edit_description(self, *args, **kwargs):
+        # TODO: Сделать
+        pass
+
+    def send_email(self, request, *args, **kwargs):
+        # TODO: Сделать
+        pass
+
+    def download(self, request, *args, **kwargs):
+        # TODO: Сделать
+        pass
+
+    def delete(self, request, *args, **kwargs):
+        pass
