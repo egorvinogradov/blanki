@@ -51,3 +51,19 @@ class InvoicePosition(models.Model):
     pos_type = models.CharField(u'Единица')
     number = models.CharField()
     price = models.CharField()
+
+
+class Act(models.Model):
+
+    invoice = models.OneToOneField('Invoice')
+    number = models.PositiveIntegerField()
+    date = models.DateField()
+
+
+class ActPosition(models.Model):
+
+    act = models.ForeignKey('Act')
+    name = models.CharField()
+    pos_type = models.CharField(u'Единица')
+    number = models.CharField()
+    price = models.CharField()
