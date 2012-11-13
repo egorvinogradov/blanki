@@ -4,7 +4,7 @@
 	background: #E9EEF0;
 }
 
-/* layout */
+/* sheet */
 
 .doc-sheet-logo {
     border: 1px solid #CDCDCD;
@@ -26,8 +26,53 @@
     overflow: hidden;
 }
 
-/* / layout */
+/* / sheet */
 
+/* buttons */
 
+.doc-buttons {
+    text-align: center;
+    width: 960px;
+    margin: 0 auto;
+    color: #404548;
+}
+
+.doc-buttons__row_top {
+    padding: 45px 0 40px 0;
+    border-bottom: 1px solid #BCD1DB;
+    box-shadow: 0 1px 1px #fff;  
+}
+
+.doc-buttons__row_top .doc-button {
+    margin: 0 8px;
+}
+
+.doc-buttons__row_bottom {
+    padding: 40px 0 20px 0;
+}
+
+.doc-buttons-fieldset {
+    display: inline-block;
+    border: 1px solid #BCD1DB;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(140,156,163,.3);
+    padding: 19px 15px 15px 15px;
+    position: relative;
+    vertical-align: top;
+    margin: 0 8px;
+}
+
+.doc-buttons-fieldset__title {
+    position: absolute;
+    padding: 0 4px;
+    background: #E9EEF0;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: bold;
+    left: 11px;
+    top: -7px;
+}
+
+/* / buttons */
 
 

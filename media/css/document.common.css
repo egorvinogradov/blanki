@@ -776,5 +776,27 @@ _:-o-prefocus, .doc-sheet-select:after { /* opera only */
 
 /* dropdowns */
 
+/*
+
+    <div class="doc-dropdown doc-dropdown_appearance_select">
+        <div class="doc-dropdown__row">Раз в месяц</div>
+        <div class="doc-dropdown__row">Раз в год</div>
+        <div class="doc-dropdown__row">
+            Раз в
+            <span class="doc-field doc-field_number doc-field_size_20">
+                <input class="doc-field__input" min="1" value="10">
+            </span>
+            дней
+        </div>
+    </div>
+
+*/
+
+
+
+
+
+
+
 
 /* / dropdowns */
