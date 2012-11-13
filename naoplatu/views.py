@@ -126,6 +126,10 @@ class InvoiceDetailView(View, TemplateResponseMixin):
         context = {'mail_form': form, 'invoice': invoice}
         return self.render_to_response(context)
 
+    def remind_email(self, request, *args, **kwargs):
+        # TODO: Сделать
+        pass
+
     def regular(self, request, *args, **kwargs):
         # TODO: Проверить
         form = RegularForm(request.POST or None, instance=self.invoice)
@@ -136,6 +140,47 @@ class InvoiceDetailView(View, TemplateResponseMixin):
         context = {'regular_form': form, 'invoice': invoice}
         return self.render_to_response(context)
 
-    def close_with_act(self, request, *args, **kwargs):
+    def dublicate(self, request, *args, **kwargs):
         # TODO: Сделать
+        pass
+
+    def edit(self, request, *args, **kwargs):
+        # TODO: Сделать
+        pass
+
+    def mark_paid(self, request, *args, **kwargs):
+        # TODO: Сделать
+        pass
+
+    def close_with_act(self, request, *args, **kwargs):
+        # TODO: Сделать форму
+        pass
+
+    def delete(self, request, *args, **kwargs):
+        # TODO: Сделать
+        pass
+
+
+class ActDetailView(View, TemplateResponseMixin):
+
+    http_method_names = ['get', 'post']
+
+    def get(self, request, *args, **kwargs):
+        # TODO: Сделать
+        context = {}
+        return self.render_to_response(context)
+
+    def edit_description(self, *args, **kwargs):
+        # TODO: Сделать
+        pass
+
+    def send_email(self, request, *args, **kwargs):
+        # TODO: Сделать
+        pass
+
+    def download(self, request, *args, **kwargs):
+        # TODO: Сделать
+        pass
+
+    def delete(self, request, *args, **kwargs):
         pass
