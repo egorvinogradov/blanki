@@ -6,6 +6,8 @@ from naoplatu.managers import InvoiceManager
 
 class Invoice(models.Model):
 
+    STATUS_PAID = 'paid'
+
     user = models.ForeignKey('auth.User')
     org_type = models.CharField()
     org_name = models.CharField()
@@ -14,7 +16,7 @@ class Invoice(models.Model):
     org_address = models.CharField()
     org_inn = models.CharField()
     org_cat = models.CharField()
-    number = models.CharField()
+    number = models.PositiveIntegerField()
     date = models.DateField()
     org_bank = models.CharField()
     org_bic = models.CharField()
@@ -30,6 +32,7 @@ class Invoice(models.Model):
     org_email = models.EmailField()
     is_regular = models.BooleanField(default=False)
     regular_period = models.PositiveIntegerField()  # In days
+    status = models.CharField()
 
     created = models.DateField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
