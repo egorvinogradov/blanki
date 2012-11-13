@@ -2,6 +2,7 @@
 from annoying.decorators import render_to
 from django.contrib import messages
 from django.core.mail import EmailMultiAlternatives
+from django.core.urlresolvers import reverse
 from django.shortcuts import redirect
 from django.template import Context
 from django.template.loader import render_to_string
@@ -157,8 +158,11 @@ class InvoiceDetailView(View, TemplateResponseMixin):
         pass
 
     def delete(self, request, *args, **kwargs):
-        # TODO: Сделать
-        pass
+        self.invoice.is_deleted = True
+        self.invoice.save()
+        messages.success(request, u'Счёт успешно удалён')
+        redirect_to_url = reverse('naoplatu-invoice-list')
+        return redirect(redirect_to_url)
 
 
 class ActDetailView(View, TemplateResponseMixin):
@@ -183,4 +187,10 @@ class ActDetailView(View, TemplateResponseMixin):
         pass
 
     def delete(self, request, *args, **kwargs):
-        pass
+        self.act.is_deleted = True
+        self.act.save()
+        messages.success(request, u'Акт успешно удалён')
+        redirect_to_url = reverse('naoplatu-invoice-detail', kwargs={
+            'invoice_id': self.invoice.id,
+        })
+        return redirect(redirect_to_url)

@@ -18,3 +18,18 @@ class InvoiceDetailTest(test.TestCase):
 
     def test_close_with_act(self):
         pass
+
+    def test_dublicate(self):
+        pass
+
+    def test_delete(self):
+        pass
+
+    def test_mark_paid(self):
+        pass
+
+    def test_remind_email(self):
+        pass
+
+    def test_edit(self):
+        pass

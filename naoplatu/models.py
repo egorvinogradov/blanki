@@ -1,6 +1,7 @@
 # coding:utf-8
 from django.core.urlresolvers import reverse
 from django.db import models
+from naoplatu.managers import InvoiceManager
 
 
 class Invoice(models.Model):
@@ -32,6 +33,9 @@ class Invoice(models.Model):
 
     created = models.DateField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    is_deleted = models.BooleanField(default=False)
+
+    objects = InvoiceManager()
 
     def get_absolute_url(self):
         return reverse('blanki-invoice-detail', kwargs={'invoice_id': self.id})
