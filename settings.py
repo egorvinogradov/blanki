@@ -7,7 +7,6 @@ try:
     from localsettings import *
 except ImportError:
     print u'Укажите локальные настройки в файле localsettings.py'
-    sys.exit(1)
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
