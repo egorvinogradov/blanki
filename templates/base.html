@@ -42,7 +42,15 @@
 
 </head>
 <body class="body {% block body-classes %}{% endblock body-classes %}">
-{% if user.is_authenticated %}<span style="background: red;"> Я вошёл: {{ user.email }}</span> <a href="{% url auth_logout %}?next={{ project_url }}">Выйти</a>{% endif %}
+
+{% if False %}
+    {% if user.is_authenticated %}
+        <span style="background: red;">
+            Я вошёл: {{ user.email }}</span>
+            <a href="{% url auth_logout %}?next={{ project_url }}">Выйти</a>
+    {% endif %}
+{% endif %}
+
 {% block content %}
 {% endblock content %}
 

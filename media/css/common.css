@@ -89,6 +89,10 @@ html {
     height: 100%;
 }
 
+.g-hidden {
+    display: none;
+}
+
 .g-nw {
     white-space: nowrap;
 }

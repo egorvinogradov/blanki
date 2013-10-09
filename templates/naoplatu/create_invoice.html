@@ -42,13 +42,13 @@
             </div>
         </div>
 
-        <div class="doc-ad">
-            <div class="doc-ad__banner"></div>
-        </div>
+{#        <div class="doc-ad">#}
+{#            <div class="doc-ad__banner"></div>#}
+{#        </div>#}
 
         <div class="doc-sheet">
 
-            <div class="doc-sheet-block">
+            <div class="doc-sheet-block doc-sheet-block_header">
                 <div class="doc-sheet-logo">
                     <div class="doc-sheet-logo__title">Загрузить<br> логотип</div>
                     <button class="doc-button doc-button_size_25 doc-sheet-logo__button">
@@ -67,13 +67,17 @@
                         </span>
                         <span class="doc-sheet-field">
                             <span class="doc-sheet-field__before">&laquo;</span>
-                            <input class="doc-sheet-field__input" type="text" value="Первая межгалактическая корпорация" name="org_name">
+                            <span class="doc-sheet-field__input" name="org_name">
+                                Первая межгалактическая корпорация
+                            </span>
                             <span class="doc-sheet-field__after">&raquo;</span>
                         </span>
                     </div>
                     <div class="doc-sheet-row">
                         <span class="doc-sheet-field">
-                            <input class="doc-sheet-field__input" type="text" value="115093, Москва, ул. Космонавтов, д. 42" name="org_address">
+                            <span class="doc-sheet-field__input" name="org_address">
+                                115093, Москва, ул. Космонавтов, д. 42
+                            </span>
                         </span>
                     </div>
                     <div class="doc-sheet-row">
@@ -86,14 +90,16 @@
                             </select>
                         </span>:
                         <span class="doc-sheet-field">
-                            <input class="doc-sheet-field__input" type="text" value="+7 (495) 123-77-77, +7 (495) 123-77-78" name="org_phone_value">
+                            <span class="doc-sheet-field__input" name="org_phone_value">
+                                +7 (495) 123-77-77, +7 (495) 123-77-78
+                            </span>
                         </span>
                     </div>
                 </div>
             </div>
 
-            <div class="doc-sheet-block doc-sheet-block_not-required">
-                <span class="doc-sheet-block__hide">Убрать</span>
+            <div class="doc-sheet-block doc-sheet-block_not-required doc-sheet-block_tables">
+                <span class="doc-sheet-block__hide g-hidden">Убрать</span>
                 <div class="doc-sheet-h3">Образец заполнения платежного поручения</div>
                 <table class="doc-sheet-table doc-sheet-table_width_100">
                     <colgroup>
@@ -108,13 +114,17 @@
                                     <li class="doc-sheet-table__list-item doc-sheet-table__list-item_width_50">
                                         ИНН
                                         <span class="doc-sheet-field">
-                                            <input class="doc-sheet-field__input" type="text" value="7705667798" name="org_inn">
+                                            <span class="doc-sheet-field__input" name="org_inn">
+                                                7705667798
+                                            </span>
                                         </span>
                                     </li>
                                     <li class="doc-sheet-table__list-item doc-sheet-table__list-item_width_50">
                                         КПП
                                         <span class="doc-sheet-field">
-                                            <input class="doc-sheet-field__input" type="text" value="671010011" name="org_cat">
+                                            <span class="doc-sheet-field__input" name="org_cat">
+                                                671010011
+                                            </span>
                                         </span>
                                     </li>
                                 </ul>
@@ -122,8 +132,9 @@
                             <td class="doc-sheet-table__td doc-sheet-table__td_align_bottom" rowspan="2">Сч. №</td>
                             <td class="doc-sheet-table__td doc-sheet-table__td_align_bottom" rowspan="2">
                                 <span class="doc-sheet-field">
-                                    <!-- TODO: Егор, что это? -->
-                                    <input class="doc-sheet-field__input" type="text" value="40702810500005042124" name="wtf_number">
+                                    <span class="doc-sheet-field__input" name="wtf_number">
+                                        40702810500005042124
+                                    </span>
                                 </span>
                             </td>
                         </tr>
@@ -141,7 +152,9 @@
                                     </span>
                                     <span class="doc-sheet-field">
                                         <span class="doc-sheet-field__before">&laquo;</span>
-                                        <input class="doc-sheet-field__input" type="text" value="Первая межгалактическая корпорация" name="org_name">
+                                        <span class="doc-sheet-field__input" name="org_name">
+                                            Первая межгалактическая корпорация
+                                        </span>
                                         <span class="doc-sheet-field__after">&raquo;</span>
                                     </span>
                                 </div>
@@ -150,16 +163,18 @@
                         <tr>
                             <td class="doc-sheet-table__td" rowspan="2">
                                 <div class="doc-sheet-row">Банк получателя</div>
-                                <div class="doc-sheet-row">
-                                    <span class="doc-sheet-field">
-                                        <input class="doc-sheet-field__input" type="text" value="АКБ «Федеральный звёздный банк»" name="org_bank">
+                                <span class="doc-sheet-field">
+                                    <span class="doc-sheet-field__input" name="org_bank">
+                                        АКБ «Федеральный звёздный банк»
                                     </span>
-                                </div>
+                                </span>
                             </td>
                             <td class="doc-sheet-table__td">БИК</td>
                             <td class="doc-sheet-table__td">
                                 <span class="doc-sheet-field">
-                                    <input class="doc-sheet-field__input" type="text" value="044585272" name="org_bic">
+                                    <span class="doc-sheet-field__input" name="org_bic">
+                                        044585272
+                                    </span>
                                 </span>
                             </td>
                         </tr>
@@ -167,7 +182,9 @@
                             <td class="doc-sheet-table__td">Сч. №</td>
                             <td class="doc-sheet-table__td">
                                 <span class="doc-sheet-field">
-                                    <input class="doc-sheet-field__input" type="text" value="30101810800000000272" name="org_bank_number">
+                                    <span class="doc-sheet-field__input" name="org_bank_number">
+                                        30101810800000000272
+                                    </span>
                                 </span>
                             </td>
                         </tr>
@@ -178,23 +195,28 @@
             <div class="doc-sheet-h1">
                 Счет №
                 <span class="doc-sheet-field">
-                    <input class="doc-sheet-field__input" type="text" value="000289" name="number">
+                    <span class="doc-sheet-field__input" name="number">000289</span>
                 </span>
                 от
                 <span class="doc-sheet-field">
-                    <input class="doc-sheet-field__input" type="date" value="23 июля 2012 г.">
-                    <input class="doc-sheet-field__input" type="hidden" value="2012-08-23" name="date">
-                    <span class="doc-sheet-field__after">
-                        <span class="doc-sheet-field__icon_calendar"></span>
-                    </span>
+                    <span class="doc-sheet-field__input" name="date">23 июля 2012 г.</span>
                 </span>
+
+{#                <span class="doc-sheet-field">#}
+{#                    <input class="doc-sheet-field__input" type="date" value="23 июля 2012 г.">#}
+{#                    <input class="doc-sheet-field__input" type="hidden" value="2012-08-23" name="date">#}
+{#                    <span class="doc-sheet-field__after">#}
+{#                        <span class="doc-sheet-field__icon_calendar"></span>#}
+{#                    </span>#}
+{#                </span>#}
+
             </div>
 
-            <table class="doc-sheet-table doc-sheet-table_border_none">
+            <table class="doc-sheet-table doc-sheet-table_border_none doc-sheet-table_client-org">
                 <tbody>
                     <tr>
                         <!-- TODO: Узнать, правильно ли писать "Плательщик" и "Получатель" -->
-                        <td class="doc-sheet-table__td">Плательщик:</td>
+                        <td class="doc-sheet-table__td doc-sheet-table_padding_none">Плательщик:</td>
                         <td class="doc-sheet-table__td">
                             <span class="doc-sheet-select">
                                 <select class="doc-sheet-select__el" name="client_type">
@@ -205,13 +227,13 @@
                             </span>
                             <span class="doc-sheet-field">
                                 <span class="doc-sheet-field__before">&laquo;</span>
-                                <input class="doc-sheet-field__input" type="text" value="Объединённый космический альянс" name="client_name">
+                                <span class="doc-sheet-field__input" name="client_name">Объединённый космический альянс</span>
                                 <span class="doc-sheet-field__after">&raquo;</span>
                             </span>
                         </td>
                     </tr>
                     <tr>
-                        <td class="doc-sheet-table__td">Получатель:</td>
+                        <td class="doc-sheet-table__td doc-sheet-table_padding_none">Получатель:</td>
                         <td class="doc-sheet-table__td">
                             <!-- TODO: Узнать, может ли это отличаться от названия фирмы выше, в реквизитах -->
                             <span class="doc-sheet-select">
@@ -223,7 +245,7 @@
                             </span>
                             <span class="doc-sheet-field">
                                 <span class="doc-sheet-field__before">&laquo;</span>
-                                <input class="doc-sheet-field__input" type="text" value="Первая межгалактическая корпорация" name="org_name">
+                                <span class="doc-sheet-field__input" name="org_name">Первая межгалактическая корпорация</span>
                                 <span class="doc-sheet-field__after">&raquo;</span>
                             </span>
                         </td>
@@ -231,18 +253,18 @@
                 </tbody>
             </table>
 
-            <table class="doc-sheet-table doc-sheet-table_width_100">
+            <table class="doc-sheet-table doc-sheet-table_width_100 doc-sheet-table_order">
                 <colgroup>
                     <col class="doc-sheet-table__col_width_5">
-                    <col class="doc-sheet-table__col_width_45">
+                    <col class="doc-sheet-table__col_width_40">
                     <col class="doc-sheet-table__col_width_10">
                     <col class="doc-sheet-table__col_width_10">
                     <col class="doc-sheet-table__col_width_10">
-                    <col class="doc-sheet-table__col_width_10">
+                    <col class="doc-sheet-table__col_width_15">
                 </colgroup>
                 <thead>
                     <tr>
-                        <th class="doc-sheet-table__th doc-sheet-table__td_align_center">№</th>
+                        <th class="doc-sheet-table__th doc-sheet-table__td_align_center doc-sheet-table-cell_size_26">№</th>
                         <th class="doc-sheet-table__th">Наименование товара</th>
                         <th class="doc-sheet-table__th">Единица</th>
                         <th class="doc-sheet-table__th">Количество</th>
@@ -255,12 +277,12 @@
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">1</td>
                         <td class="doc-sheet-table__td">
                             <span class="doc-sheet-field">
-                                <input class="doc-sheet-field__input" type="text" value="Звёздный истребитель T-65 X-Wing">
+                                <span class="doc-sheet-field__input">Звёздный истребитель T-65 X-Wing</span>
                             </span>
                         </td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
                             <span class="doc-sheet-field">
-                                <input class="doc-sheet-field__input" type="text" value="шт.">
+                                <span class="doc-sheet-field__input">шт.</span>
                             </span>
                         </td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
@@ -276,7 +298,7 @@
                         </td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
                             <span class="doc-sheet-field">
-                                <input class="doc-sheet-field__input" type="text" value="975 000.00">
+                                <span class="doc-sheet-field__input">975 000.00</span>
                             </span>
                         </td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">975 000.00</td>
@@ -285,12 +307,12 @@
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">2</td>
                         <td class="doc-sheet-table__td">
                             <span class="doc-sheet-field">
-                                <input class="doc-sheet-field__input" type="text" value="Звёздный истребитель T-65 X-Wing">
+                                <span class="doc-sheet-field__input">Звёздный истребитель T-65 X-Wing</span>
                             </span>
                         </td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
                             <span class="doc-sheet-field">
-                                <input class="doc-sheet-field__input" type="text" value="шт.">
+                                <span class="doc-sheet-field__input">шт.</span>
                             </span>
                         </td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
@@ -306,13 +328,13 @@
                         </td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">
                             <span class="doc-sheet-field">
-                                <input class="doc-sheet-field__input" type="text" value="975 000.00">
+                                <span class="doc-sheet-field__input">975 000.00</span>
                             </span>
                         </td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">975 000.00</td>
                     </tr>
                     <tr>
-                        <td class="doc-sheet-table__td doc-sheet-table__border_none" colspan="2" rowspan="3">
+                        <td class="doc-sheet-table__td doc-sheet-table_border_none doc-sheet-table_padding_none doc-sheet-table__td_align_top" colspan="2" rowspan="3">
                             <button class="doc-button doc-button_size_28 doc-button_add">
                                 <span class="doc-button__inner">
                                     <i class="doc-button__icon"></i>
@@ -320,12 +342,13 @@
                                 </span>
                             </button>
                         </td>
-                        <td class="doc-sheet-table__td doc-sheet-table__border_none doc-sheet-table__td_align_right" colspan="3">Итого</td>
+                        <td class="doc-sheet-table__td doc-sheet-table_border_none doc-sheet-table__td_align_right" colspan="3">Итого</td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">975 000.00</td>
                     </tr>
                     <tr>
-                        <td class="doc-sheet-table__td doc-sheet-table__border_none doc-sheet-table__td_align_right" colspan="3">
-                            <div class="doc-dropdown doc-dropdown_appearance_select">
+                        <td class="doc-sheet-table__td doc-sheet-table_border_none doc-sheet-table__td_align_right" colspan="3">
+
+                            <div class="doc-dropdown doc-dropdown_appearance_select g-hidden">
                                 <div class="doc-dropdown__row">Без НДС</div>
                                 <div class="doc-dropdown__row">НДС (18%)</div>
                                 <div class="doc-dropdown__row">НДС (10%)</div>
@@ -340,12 +363,23 @@
                                     </label>
                                 </div>
                             </div>
+
+                            <span class="doc-sheet-select">
+                                <select class="doc-sheet-select__el">
+                                    <option selected="">НДС (18%)</option>
+                                    <option>НДС (10%)</option>
+                                    <option>Без НДС</option>
+                                </select>
+                            </span>
+
                         </td>
                         <td class="doc-sheet-table__td doc-sheet-table__td_align_center">175 500.00</td>
                     </tr>
                     <tr>
-                        <td class="doc-sheet-table__th doc-sheet-table__border_none doc-sheet-table__td_align_right" colspan="3">Итого</td>
-                        <td class="doc-sheet-table__th doc-sheet-table__td_align_center">1 150 500.00</td>
+                        <td class="doc-sheet-table__th doc-sheet-table_border_none doc-sheet-table__td_align_right doc-sheet-b doc-sheet-table-cell_size_26" colspan="3">
+                            Всего к оплате
+                        </td>
+                        <td class="doc-sheet-table__th doc-sheet-table__td_align_center doc-sheet-b">1 150 500.00</td>
                     </tr>
                 </tbody>
             </table>
@@ -354,14 +388,24 @@
                 Всего наименований 1, на сумму 1 150 500.00 руб.
             </div>
             <div class="doc-sheet-row doc-sheet-b">
-                Тридцать семь тысяч пятьсот шестнадцать рублей восемнадцать копеек
+                Один миллион сто пятьдесят тысяч пятьсот рублей ноль копеек
             </div>
 
-            <div class="doc-sheet-block doc-sheet-block_not-required">
-                <span class="doc-sheet-block__hide">Убрать</span>
-                <div class="doc-sheet-block__title">Пояснительный текст</div>
+            <div class="doc-sheet-block doc-sheet-block_not-required doc-sheet-block_annotation">
+                <span class="doc-sheet-block__hide g-hidden">Убрать</span>
+                <div class="doc-sheet-block__title g-hidden">Пояснительный текст</div>
                 <div class="doc-sheet-field">
-                    <textarea class="doc-sheet-field__textarea">Внимание! Счет действителен в течении 5 рабочих дней. Неоплаченный счет аннулируется. Товар отпускается по приходу денег на расчетный счет Поставщика при наличии копии платежного поручения, доверенности и паспорта. Оплата счета означает согласие с условиями поставки товара.</textarea>
+                    <span class="doc-sheet-field__input">
+
+{#                        Внимание! Счет действителен в течении 5 рабочих дней. Неоплаченный счет аннулируется.#}
+{#                        Товар отпускается по приходу денег на расчетный счет Поставщика при наличии копии платежного#}
+{#                        поручения, доверенности, паспорта.#}
+
+                        Внимание! Счет действителен в течении 5 рабочих дней. Неоплаченный счет аннулируется.
+                        Товар отпускается по приходу денег на расчетный счет Поставщика при наличии копии платежного
+                        поручения, доверенности и паспорта. Оплата счета означает согласие с условиями поставки товара.
+
+                    </span>
                 </div>
             </div>
 
@@ -373,9 +417,9 @@
                             <span class="doc-button__inner">Загрузить роспись</span>
                         </button>
                     </span>
-                    <span class="doc-sheet-field">
+                    <span class="doc-sheet-field doc-sheet-signatures__name">
                         <span class="doc-sheet-field__before">(</span>
-                        <input class="doc-sheet-field__input" type="text" value="Иванов А.Б.">
+                        <span class="doc-sheet-field__input">Иванов А.Б.</span>
                         <span class="doc-sheet-field__after">)</span>
                     </span>
                 </div>
@@ -386,9 +430,9 @@
                             <span class="doc-button__inner">Загрузить роспись</span>
                         </button>
                     </span>
-                    <span class="doc-sheet-field">
+                    <span class="doc-sheet-field doc-sheet-signatures__name">
                         <span class="doc-sheet-field__before">(</span>
-                        <input class="doc-sheet-field__input" type="text" value="Петрова В.Г.">
+                        <span class="doc-sheet-field__input">Петрова В.Г.</span>
                         <span class="doc-sheet-field__after">)</span>
                     </span>
                 </div>
@@ -429,7 +473,7 @@
             <div class="doc-buttons__row doc-buttons__row_bottom">
                 <div class="doc-buttons-fieldset">
                     <span class="doc-buttons-fieldset__title">Загрузить в формате</span>
-                    <button class="doc-button doc-button_color_grey doc-button_size_28 doc-button_pdf doc-button_bottom-control">
+                    <button class="doc-button doc-button_color_grey doc-button_size_28 doc-button_pdf doc-button_bottom-control doc-buttons-fieldset_margin-right">
                         <span class="doc-button__inner">
                             <i class="doc-button__icon"></i> PDF
                         </span>
@@ -442,45 +486,51 @@
                 </div>
                 <div class="doc-buttons-fieldset">
                     <span class="doc-buttons-fieldset__title">Отправить по почте</span>
-                    <span class="doc-field">
+                    <span class="doc-field doc-buttons-fieldset_margin-right">
                         <input class="doc-field__input" type="email" placeholder="Электронная почта">
                     </span>
                     <button class="doc-button doc-button_color_grey doc-button_size_28 doc-button_bottom-control" type="submit">
                         <span class="doc-button__inner">Отправить</span>
                     </button>
                 </div>
-                <div class="doc-buttons-fieldset">
+                <div class="doc-buttons-fieldset doc-buttons-fieldset_regular">
                     <span class="doc-buttons-fieldset__title">Выставлять по почте регулярно</span>
 
 
-                    <div class="doc-dropdown doc-dropdown_appearance_select">
-                        <div class="doc-dropdown__row">Раз в месяц</div>
-                        <div class="doc-dropdown__row">Раз в год</div>
-                        <div class="doc-dropdown__row">
-                            Раз в
-                            <span class="doc-field doc-field_number doc-field_size_20">
-                                <input class="doc-field__input" min="1" value="10">
-                            </span>
-                            дней
-                        </div>
+{#                    <div class="doc-dropdown doc-dropdown_appearance_select">#}
+{#                        <div class="doc-dropdown__row">Раз в месяц</div>#}
+{#                        <div class="doc-dropdown__row">Раз в год</div>#}
+{#                        <div class="doc-dropdown__row">#}
+{#                            Раз в#}
+{#                            <span class="doc-field doc-field_number doc-field_size_20">#}
+{#                                <input class="doc-field__input" min="1" value="10">#}
+{#                            </span>#}
+{#                            дней#}
+{#                        </div>#}
+{#                    </div>#}
+
+                    <div class="doc-sheet-row">
+                        <span class="doc-sheet-select">
+                            <select class="doc-sheet-select__el doc-field__input" name="org_type">
+                                <option selected>Раз в месяц</option>
+                                <option>Раз в год</option>
+                                <option>Раз в 10 дней</option>
+                            </select>
+                        </span>
                     </div>
 
-                    <div class="doc-dropdown">
-                        <div class="doc-dropdown__value"></div>
-                        <ul class="">
-                            <li></li>
-                        </ul>
-
+                    <div class="doc-sheet-row">
+                        <span class="doc-field">
+                            <input class="doc-field__input" type="email" placeholder="Электронная почта">
+                        </span>
                     </div>
 
+                    <div class="doc-sheet-row">
+                        <button class="doc-button doc-button_color_grey doc-button_size_28 doc-button_bottom-control">
+                            <span class="doc-button__inner">Выставлять регулярно</span>
+                        </button>
+                    </div>
 
-
-                    <span class="doc-field">
-                        <input class="doc-field__input" type="email" placeholder="Электронная почта">
-                    </span>
-                    <button class="doc-button doc-button_color_grey doc-button_size_28 doc-button_bottom-control">
-                        <span class="doc-button__inner">Выставлять регулярно</span>
-                    </button>
                 </div>
             </div>
         </div>

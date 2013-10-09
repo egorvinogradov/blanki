@@ -116,3 +116,13 @@ Blanki.Auth.prototype.init = function(){
         }
     }, this);
 };
+
+
+// todo: remove
+
+$('.doc-sheet-field__input').each(function(i, e){
+    var element = $(e);
+    element.html($.trim(element.html()));
+    e.contentEditable = true
+    e.spellcheck = false
+});

@@ -19,7 +19,7 @@
     color: #69787F;
     font-size: 14px;
     line-height: 16px;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
 }
 
 .doc-sheet-org-info {
@@ -40,7 +40,7 @@
 .doc-buttons__row_top {
     padding: 45px 0 40px 0;
     border-bottom: 1px solid #BCD1DB;
-    box-shadow: 0 1px 1px #fff;  
+    box-shadow: 0 1px 0 #fff;
 }
 
 .doc-buttons__row_top .doc-button {
@@ -60,6 +60,7 @@
     position: relative;
     vertical-align: top;
     margin: 0 8px;
+    text-align: left;
 }
 
 .doc-buttons-fieldset__title {
@@ -72,6 +73,46 @@
     left: 11px;
     top: -7px;
 }
+
+.doc-buttons-fieldset_regular {
+    width: 212px;
+}
+
+.doc-buttons-fieldset_regular .doc-sheet-row {
+    padding-bottom: 12px;
+}
+
+.doc-buttons-fieldset_regular .doc-sheet-row:last-child {
+    padding-bottom: 0;
+}
+
+.doc-buttons-fieldset_regular .doc-field__input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.doc-buttons-fieldset_regular .doc-sheet-select,
+.doc-buttons-fieldset_regular .doc-sheet-select__el {
+    width: 100%;
+}
+
+.doc-buttons-fieldset_regular .doc-sheet-select__el {
+    border-color: #B3B3B3;
+    border-top-color: #7C7C7C;
+    height: 28px;
+    border-radius: 2px;
+    padding-left: 3px;
+}
+
+.doc-buttons-fieldset_regular .doc-sheet-select:after {
+    margin-top: 4px;
+}
+
+.doc-buttons-fieldset_margin-right {
+    margin-right: 8px;
+}
+
+
 
 /* / buttons */
 

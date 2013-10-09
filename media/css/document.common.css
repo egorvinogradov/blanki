@@ -273,7 +273,8 @@
 	background: #fff;
 	border: 1px solid #97ACB6;
 	box-shadow: 0 3px 8px rgba(0,0,0,.25);
-	margin: 0 auto;
+	margin: 14px auto 0 auto;
+    position: relative;
 }
 
 /* / sheet */
@@ -341,6 +342,12 @@
         color-stop(0.87, #CFDCE2)
     );
     box-shadow: inset 0 2px 3px rgba(105,140, 156, .6);
+    outline: none;
+}
+
+.doc-button:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px rgba(101,193,255,.75);
 }
 
 .doc-button__inner {
@@ -597,7 +604,8 @@
     font: 15px/18px Arial, sans-serif;
     border-bottom: 1px dotted #797C80;
     padding: 1px 1px 0 1px;
-    border-radius: 3px;
+    border-radius: 1px;
+    display: inline-block;
 }
 
 .doc-sheet-field__input:focus {
@@ -605,6 +613,7 @@
     box-shadow: 0 0 2px 1px rgba(101,193,255,.75);
     outline: none;
     padding: 0;
+    border-radius: 3px;
 }
 
 .doc-field__input {
@@ -656,6 +665,7 @@
 .doc-sheet-field {
     display: inline-block;
     line-height: 18px;
+    padding: 2px 0;
 }
 
 .doc-sheet-field__before,
@@ -675,6 +685,7 @@
 .doc-field_range {
     line-height: 21px;
     overflow: hidden;
+    display: inline-block;
 }
 
 .doc-field_range .doc-field__input {
@@ -713,7 +724,7 @@
 
 .doc-sheet-select__el {
     margin: 0;
-    padding: 2px 8px 2px 2px;
+    padding: 2px 8px 2px 5px;
     background: #fff;
     color: #2c333b;
     font: 13px Arial, sans-serif;
@@ -737,12 +748,16 @@
 
 .doc-sheet-select {
     position: relative;
+    padding-right: 4px;
+    display: inline-block;
+    vertical-align: bottom;
 }
 
 .doc-sheet-select:after {
     content: '▼';
     color: #8B8F93;
     text-indent: 6px;
+    text-align: left;
     font-size: 11px;
     width: 22px;
     height: 22px;
@@ -774,29 +789,234 @@ _:-o-prefocus, .doc-sheet-select:after { /* opera only */
 
 /* / selects */
 
-/* dropdowns */
 
-/*
+/* tables */
 
-    <div class="doc-dropdown doc-dropdown_appearance_select">
-        <div class="doc-dropdown__row">Раз в месяц</div>
-        <div class="doc-dropdown__row">Раз в год</div>
-        <div class="doc-dropdown__row">
-            Раз в
-            <span class="doc-field doc-field_number doc-field_size_20">
-                <input class="doc-field__input" min="1" value="10">
-            </span>
-            дней
-        </div>
-    </div>
+.doc-sheet-table {
+    color: #69787f;
+}
 
-*/
+.doc-sheet-table__td,
+.doc-sheet-table__th {
+    border: 1px solid #aaaaaa;
+    padding: 4px 6px 5px 6px;
+}
+
+.doc-sheet-table_width_100 {
+    width: 100%;
+}
+
+.doc-sheet-table__col_width_5 {
+    width: 5%;
+}
+
+.doc-sheet-table__col_width_10 {
+    width: 10%;
+}
+
+.doc-sheet-table__col_width_15 {
+    width: 15%;
+}
+
+.doc-sheet-table__col_width_30 {
+    width: 30%;
+}
+
+.doc-sheet-table__col_width_40 {
+    width: 40%;
+}
+
+.doc-sheet-table__col_width_45 {
+    width: 45%;
+}
+
+.doc-sheet-table__col_width_60 {
+    width: 60%;
+}
+
+.doc-sheet-table__list_inline .doc-sheet-table__list-item {
+    display: inline-block;
+}
+
+.doc-sheet-table__list-item_width_50 {
+    width: 49%;
+}
+
+.doc-sheet-table__td_align_top {
+    vertical-align: top;
+}
+
+.doc-sheet-table__td_align_bottom {
+    vertical-align: bottom;
+}
+
+.doc-sheet-table__td_align_center {
+    text-align: center;
+}
+
+.doc-sheet-table__td_align_right {
+    text-align: right;
+}
+
+.doc-sheet-table_border_none,
+.doc-sheet-table_border_none .doc-sheet-table__td,
+.doc-sheet-table_border_none .doc-sheet-table__th {
+    border: 0;
+}
+
+.doc-sheet-table_padding_none {
+    padding: 0;
+}
+
+/* / tables */
 
 
+/* headers */
 
+.doc-sheet-h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #69787f;
+    padding-bottom: 20px;
+    font-size: 24px;
+    line-height: 26px;
+}
 
+.doc-sheet-h1 .doc-sheet-field__input {
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 20px;
+}
 
+.doc-sheet-h3 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    color: #69787f;
+    padding-bottom: 16px;
+}
 
+/* / headers */
 
+.doc-sheet-signatures {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
 
-/* / dropdowns */
+.doc-sheet-signatures__row {
+    padding-bottom: 14px;
+    color: #69787f;
+}
+
+.doc-sheet-signatures__position {
+    display: inline-block;
+    width: 130px;
+    vertical-align: bottom;
+    padding-bottom: 3px;
+}
+
+.doc-sheet-signatures__space {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    border-bottom: 1px solid #aaaaaa;
+    padding-bottom: 3px;
+}
+
+.doc-sheet-signatures__name {
+    vertical-align: text-top;
+}
+
+.doc-sheet-stamp {
+    position: absolute;
+    bottom: 60px;
+    right: 80px;
+    border: 1px solid #cccccc;
+    border-radius: 200px;
+    width: 200px;
+    height: 200px;
+}
+
+.doc-sheet-stamp__title {
+    width: 100px;
+    text-align: center;
+    color: #69787f;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.doc-sheet-stamp__button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 80px;
+    margin-left: -40px;
+}
+
+.doc-sheet-b {
+    font-weight: bold;
+}
+
+.doc-sheet-org-info {
+    padding-left: 2px;
+}
+
+.doc-sheet-row {
+    clear: both;
+    padding-bottom: 6px;
+}
+
+.doc-button_add {
+    margin-top: 10px;
+}
+
+.doc-sheet-block_header {
+    padding-bottom: 55px;
+}
+
+.doc-sheet-org-info .doc-sheet-row {
+    padding-bottom: 10px;
+}
+
+.doc-sheet-block_tables {
+    padding-bottom: 70px;
+}
+
+.doc-sheet-table_client-org {
+    margin-bottom: 20px;
+}
+
+.doc-sheet-table_order {
+    margin-bottom: 30px;
+}
+
+.doc-sheet-table-cell_size_26 {
+    line-height: 26px;
+}
+
+.doc-sheet-block_annotation {
+    margin-top: 50px;
+}
+
+.doc-sheet-block_annotation .doc-sheet-field__input {
+    line-height: 20px;
+    font-size: 14px;
+    margin-left: -4px;
+    margin-right: -4px;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+.doc-sheet-block_annotation .doc-sheet-field__input:not(:focus) {
+    border-bottom: 0;
+    padding: 5px;
+}
+
+.doc-sheet-block_annotation .doc-sheet-field__input:hover {
+    box-shadow: 0 0 4px 1px rgba(101,193,255,.5);
+}
